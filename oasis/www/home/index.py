@@ -1,28 +1,28 @@
 import frappe
 
 def get_context(context):  
-    context.partners = frappe.get_all('Partners',  
+    context.partners = frappe.get_all('partners',  
         fields=['partner_name', 'key_partner', 'logo', 'icon', 'url', 'description', 'contact'],
         order_by='creation asc'
     )
 
-    casestudies = frappe.get_all('Case Studies', fields=['name', 'title', 'challenge', 'solution', 'category_tag', 'solution_partner'], order_by='creation asc')
+    casestudies = frappe.get_all('case studies', fields=['name', 'title', 'challenge', 'solution', 'category_tag', 'solution_partner'], order_by='creation asc')
     partner_id = [casestudy.solution_partner for casestudy in casestudies]
-    partners = frappe.get_all('Partners', filters={'name': ['in', partner_id]}, fields=['partner_name', 'name', 'key_partner', 'logo', 'icon', 'url', 'description', 'contact'])
+    partners = frappe.get_all('partners', filters={'name': ['in', partner_id]}, fields=['partner_name', 'name', 'key_partner', 'logo', 'icon', 'url', 'description', 'contact'])
     partner_lookup = {partner.name: partner for partner in partners}
 
     get_partner = []
     for casestudy in casestudies:
 
         tools = frappe.get_all(
-        'Tools Used',  
+        'tools used',  
         filters={'parent': casestudy['name']},  
         fields=['tools_used']  
         )
         detailed_tools = []
         for tool in tools:  
             tool_details = frappe.get_value(
-                'Case Study Tools',  
+                'case study tools',  
                 tool['tools_used'],  
                 ['name', 'logo', 'url']  
             )
@@ -71,7 +71,7 @@ def get_context(context):
         },
         {
             "background_color": "#F5E253",
-            "vector":"/assets/oasis/images/vector6.svg",
+            "vector":"/assets/oasis/images/vector2.svg",
             "description":"Capacity and awareness building of FOSS technologies via workshops, training sessions, meetups, and technical demonstrations.",
             "button_1":"FOLLOW EVENTS",
             "link_1":"",
