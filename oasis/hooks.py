@@ -4,6 +4,8 @@ app_publisher = "Anu Ouseph"
 app_description = "Oasis Web"
 app_email = "anuouseph04@gmail.com"
 app_license = "mit"
+app_include_css = "/assets/oasis/css/oasis.css"
+
 
 # Apps
 # ------------------

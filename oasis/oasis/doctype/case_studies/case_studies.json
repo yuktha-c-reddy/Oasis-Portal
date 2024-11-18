@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2024-11-17 15:22:29.268974",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "challenge",
+  "solution",
+  "category_tag",
+  "solution_partner",
+  "tools_used"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "challenge",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Challenge",
+   "reqd": 1
+  },
+  {
+   "fieldname": "solution",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Solution",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category_tag",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category Tag",
+   "reqd": 1
+  },
+  {
+   "fieldname": "solution_partner",
+   "fieldtype": "Link",
+   "label": "Solution Partner",
+   "options": "partners",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tools_used",
+   "fieldtype": "Table MultiSelect",
+   "label": "Tools Used",
+   "options": "tools used"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-17 16:15:26.142236",
+ "modified_by": "Administrator",
+ "module": "Oasis",
+ "name": "case studies",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

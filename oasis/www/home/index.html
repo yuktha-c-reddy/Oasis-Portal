@@ -1,0 +1,219 @@
+{% extends "templates/layouts/layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    .case-active{
+        border-left: 4px solid rgba(0, 0, 0, 0.16);
+    }
+    .case-inactive{
+        border-left: 4px solid transparent;
+    }
+</style>
+<section class="section_1">
+    <div class="main-container" style="width: 100%; padding: 0px 146px;">
+       <div class="inner-container" style="display: flex; justify-content: space-between; gap: 20px;">
+        <div class="left-container" style="width: 813px; height: 686px; background-color: white; border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 64px; display: flex; flex-direction: column; gap: 64px;">
+            <div>
+                <img src="/assets/oasis/images/banner1.svg" alt="">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                <div>
+                    <p style="font-family: Bricolage Grotesque, sans-serif; font-size: 36px; font-weight: 600; line-height: 44px; max-width: 373px;">
+                        Empowering change through open source
+                    </p>
+                </div>
+                <div>
+                    <p style="font-family: Inter, sans-serif; font-weight: 400; color: rgba(0, 0, 0, 1); font-size: 16px; line-height: 21px;">
+                        We are a network of organizations united by the vision that Free and Open-Source Software (FOSS) can empower citizen sector organizations and communities to create positive impact at scale.
+                    </p>
+                </div>
+                <div style="font-size: 14px; font-family: Inter, sans-serif; display: flex; gap: 24px;">
+                    <button style="width: 123px; font-weight: 700; height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #000; color: #ffffff;"> participate </button>
+                    <button style="width: 77px; font-weight: 700; height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #f8f7ef;"> Join </button>
+                </div>
+            </div>
+        </div>
+        <div class="right-container" style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
+            <div class="right-top" style="width: 345px;">
+                <img src="/assets/oasis/images/banner2.svg" alt="">
+            </div>
+            <div class="right-bottom" style="width: 345px; height: 408px; padding: 36px 24px; display: flex; justify-content: end; flex-direction: column; gap: 24px; background-color: #FF6459; border: 0.5px solid rgba(0, 0, 0, 0.16); position: relative;">
+                <div style="position: absolute; top: 0px; right: 0px;">
+                    <img fill="#fe4537" src="/assets/oasis/images/shape3.svg" alt="">
+                </div>
+                <div>
+                    <div>
+                        <p style="font-family: Bricolage Grotesque, sans-serif; margin: 0px; font-size: 24px; font-weight: 600; line-height: 30px; color: #ffffff;">
+                            FOSS (Free and & Open-Source Software) enables access to libre, low-cost, and sustainable solutions and promotes transparency and collaboration.
+                        </p>
+                    </div>
+                    <hr style="height: 1px; width: 297px; background-color: #fe4537; border: none;">
+                    <div>
+                        <p style="font-size: 16px; font-family: Inter, sans-serif; margin: 0px; font-weight: 500; line-height: 25px; color: #ffffff;">
+                            Read about FOSS & Social Sector 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+</section>
+
+<section>
+    <div style="width: 100%; height: auto; padding: 64px 146px; background-color: #f8f7ef; display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; align-items: center;">
+    {% for partner in partners %}
+        <div>
+            <a href="{{ partner.url }}" target="_blank" > 
+                <img src="{{ partner.logo }}" alt="logo" > 
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+</section>
+<section>
+    <div style="width: 100%;">
+        <div style="background-image: url('/assets/oasis/images/bgvector.svg'); background-color: #f8f7ef; background-repeat: no-repeat; background-size: cover; width: 100%; padding: 128px 146px; display: flex; gap: 36px;">
+            <div style=" display: flex; gap: 36px; overflow-x: scroll; padding-left: 146px; padding-right: 146px; margin: 0 -146px; scroll-padding-left: 146px; -webkit-overflow-scrolling: touch; -ms-overflow-style: none; scrollbar-width: none; -webkit-scrollbar-width: none;">
+                <div style="width: 442px; flex-basis: 442px; flex-grow: 0; flex-shrink: 0; height: 619px; padding: 64px 32px; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; background-color: #ffffff; ">
+                    <p style="font-family: 'Bricolage Grotesque', sans-serif; margin: 0px; font-size: 48px; font-weight: 600; line-height: 55px; color: #000000; max-width: 242px;">
+                        How we achieve it?
+                    </p>
+                </div>
+                {% for card in cards %}
+                <div style="width: 442px; height: 619px; flex-basis: 442px; flex-grow: 0; flex-shrink: 0; padding: 64px 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; background-color: {{ card.background_color }}; position: relative;">
+                    <div>
+                        <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 24px; font-weight: 500; line-height: 30px; color: #000000;">
+                            {{ card.description }}
+                        </p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px; z-index: 999;">
+                        <div>
+                            <button style="background-color: #ffffff; padding: 12px 16px; border-radius: 40px; border: none; width: auto; font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 700; line-height: 20px; text-transform: uppercase;">{{ card.button_1 }}</button>
+                        </div>
+                        <div>
+                            <button style="background-color: #ffffff; padding: 12px 16px; border-radius: 40px; border: none; width: auto; font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 700; line-height: 20px; text-transform: uppercase;">{{ card.button_2 }}</button>
+                        </div>
+                    </div>
+                    <div style="position: absolute; bottom: 0px; right: 0px;">
+                        <img src="{{card.vector}}" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div style="width: 100%; padding: 128px 146px; background-color: #ffffff;">
+        <div style="display: flex; flex-direction: column; gap: 64px;">
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <p style="font-family: 'Bricolage Grotesque', sans-serif; margin: 0px; font-size: 32px; font-weight: 600; line-height: 37px; color: #000000;">Here are a few impact stories. </p>
+                <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: #000000;">We helped these organizations to adapt FOSS and become more impactful.</p>
+            </div>
+            <div class="case-study-main" style="display: flex; gap: 20px;">
+                <div class="case-study-right" style="display: flex;">
+                    <div style="display: flex; flex-direction: column;">
+                        {% for item in casestudies %}
+                        <div id="casestudy-container" onclick="updateCaseStudyContent('{{ item.name }}', event)"  style="cursor: pointer; border-top: 0.5px solid rgba(0, 0, 0, 0.16); border-bottom: 0.5px solid rgba(0, 0, 0, 0.16); width: 290px; height: 96px; padding: 24px 16px; display: flex; flex-direction: column; gap: 4px;">
+                            <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px; color: rgba(0, 0, 0, 0.86);">{{item.title}}</p>
+                            <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: rgba(0, 0, 0, 0.56);">cupabangalore.org</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 23px;">
+                        <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: 424px; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
+                            <div>
+                                <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Challenge</p>
+                            </div>
+                            <div>
+                                <p id="challenge-text" style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 20px; font-weight: 400; line-height: 27px; color: rgba(0, 0, 0, 1);">
+                                    {{casestudies[0].challenge}}
+                                </p>
+                            </div>
+                            <div>
+                                <p id="category-text" style="background-color: #FF94B8; padding: 4px 8px; border-radius: 40px; width: 158px; font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 500; line-height: 21px; color: rgba(0, 0, 0, 1);">
+                                    {{casestudies[0].category_tag}}
+                                </p>
+                            </div>
+                        </div>
+                        <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: 424px; padding: 32px; display: flex; gap: 20px;">
+                            <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Solution Partner</p>
+                            <img id="solution-partner" src="{{casestudies[0].solution_partner}}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="case-study-left" style="display: flex; flex-direction: column; gap: 23px;">
+                    <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: 414px; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Solution</p>
+                        </div>
+                        <div>
+                            <p id="solution-text" style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 20px; font-weight: 400; line-height: 27px; color: rgba(0, 0, 0, 1);">
+                                {{casestudies[0].solution}}
+                            </p>
+                        </div>
+                    </div>
+                    <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: 414px; padding: 32px; display: flex; flex-wrap: wrap; gap: 20px;">
+                        <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Tool used</p>
+                        <div id="tool-list" style="display: flex; gap: 24px;">
+                            {% for item in casestudies[0].tools_used %}
+                                <img src="{{item.logo}}" alt="">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    window.onload = function() {
+        const firstCaseStudyContainer = document.querySelector('#casestudy-container');
+            firstCaseStudyContainer.classList.add('case-active');
+    }
+    var casestudies = {{ casestudies | tojson }};
+    function updateCaseStudyContent(caseStudyName, event) {
+        console.log("Case Study ID:", caseStudyName);
+        console.log("All Case Studies:", casestudies);
+        const caseStudy = casestudies.find(item => item.name === caseStudyName);
+        console.log(caseStudy)
+        document.getElementById('challenge-text').textContent = caseStudy.challenge;
+        document.getElementById('solution-text').textContent = caseStudy.solution;
+        document.getElementById('category-text').textContent = caseStudy.category_tag;
+        document.getElementById('solution-partner').src = caseStudy.solution_partner;
+
+        const toolListContainer = document.getElementById('tool-list'); 
+        toolListContainer.innerHTML = ''; 
+
+        caseStudy.tools_used.forEach(tool => {
+            const toolImage = document.createElement('img');
+            toolImage.src = tool.logo; 
+
+            toolListContainer.appendChild(toolImage);
+        });
+
+        const allCaseStudyContainers = document.querySelectorAll('#casestudy-container');
+    
+        allCaseStudyContainers.forEach(container => {
+            container.classList.remove('case-active');
+            container.classList.add('case-inactive');
+        });
+
+        const currentTarget = event.currentTarget;
+        if (currentTarget) {
+            currentTarget.classList.remove('case-inactive');
+            currentTarget.classList.add('case-active');
+        }
+    }
+</script>
+
+{% endblock %}
+
+
+
+
+
