@@ -26,7 +26,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-17 15:51:31.153773",
+ "modified": "2024-11-25 16:31:08.036293",
  "modified_by": "Administrator",
  "module": "Oasis",
  "name": "case study tools",
@@ -44,6 +44,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
   }
  ],
  "sort_field": "creation",

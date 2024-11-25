@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2024-11-20 12:04:27.430829",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "city",
+  "primary_contact",
+  "email",
+  "mobile_no",
+  "website",
+  "foss_usage_rate",
+  "expectations_oasis",
+  "org_mission_allignment"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Tech Vendor\nNPO\nImplementation Partner\nTech Volunteer\nTechnologist\nPhilanthropy\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "City"
+  },
+  {
+   "fieldname": "primary_contact",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Primary Contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Phone",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Mobile No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Website"
+  },
+  {
+   "fieldname": "foss_usage_rate",
+   "fieldtype": "Select",
+   "ignore_user_permissions": 1,
+   "label": "FOSS Usage Rate",
+   "options": "We exclusively use FOSS\nWe use a mix of FOSS and proprietary software\nWe use very little FOSS\nWe don't currently use FOSS, but we're Interested in adopting it."
+  },
+  {
+   "fieldname": "expectations_oasis",
+   "fieldtype": "Long Text",
+   "ignore_user_permissions": 1,
+   "label": "Expectations from OASIS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "org_mission_allignment",
+   "fieldtype": "Long Text",
+   "ignore_user_permissions": 1,
+   "label": "Organisation Mission Allignment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-21 16:27:17.839829",
+ "modified_by": "Administrator",
+ "module": "Oasis",
+ "name": "join oasis",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

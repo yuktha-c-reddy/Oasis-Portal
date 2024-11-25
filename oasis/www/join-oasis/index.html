@@ -1,0 +1,183 @@
+{% extends "templates/layouts/layout.html" %}
+
+{% block content %}
+{% include "templates/web.html" %}
+<style>
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
+    }
+
+    :root {
+        --select-border: #777;
+        --select-focus: blue;
+        --select-arrow: var(--select-border);
+    }
+    .navbar{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .page_content{
+        min-height: 0px !important;
+    }
+    body{
+        color:rgba(0, 0, 0, 1) !important;
+        letter-spacing: 0px !important;
+    }
+    .input-field{
+        font-family: Inter, sans-serif;
+        width: 100%; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        background-color: transparent; 
+        outline: none; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 12px; 
+        line-height: 21px;
+        padding: 5px 15px;
+        border-radius: 10px;
+    }
+    .input-label{
+        font-family: Inter, sans-serif; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 14px; 
+        line-height: 21px;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none; 
+        background-color: transparent;
+        border: none;
+        padding: 5px 10px;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        outline: none;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    .select {
+        width: 100%;
+        font-size: 1.25rem;
+        cursor: pointer;
+        background-color: #fff;
+        font-family: Inter, sans-serif;
+        width: 100%; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        outline: none !important; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 12px; 
+        line-height: 21px;
+        padding-right: 15px;
+        border-radius: 10px;
+    }
+</style>
+
+<section style="width: 100%; min-height: 100vh; padding: 24px 146px; display: flex; justify-content: center;">
+    <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 32px; border-radius: 10px; max-width: 60%; background-color: #fff;">
+        <p style="font-family: Inter, sans-serif; font-weight: 600; color: rgba(0, 0, 0, 1); font-size: 30px; line-height: 39px;">Join OASIS</p>
+        <P style="font-family: Inter, sans-serif; font-weight: 400; color: rgba(0, 0, 0, 1); font-size: 16px; line-height: 21px; margin: 8px 0px;">Be an oasis member</P>
+        <hr style="margin: 25px 0px">
+        <form id="simpleForm">
+            <label for="name" class="input-label">Organization/Indiviual Name</label><br>
+            <input type="text" id="name" name="name" class="input-field"><br><br>
+
+            <label for="category" class="input-label">Category</label><br>
+            <div class="select">
+                <select id="category" name="category">
+                    <option disabled selected value></option>
+                    <option value="Tech Vendor">Tech Vendor</option>
+                    <option value="NPO">NPO</option>
+                    <option value="Implementation Partner">Implementation Partner</option>
+                    <option value="Tech Volunteer">Tech Volunteer</option>
+                    <option value="Technologist">Technologist</option>
+                    <option value="Philanthropy">Philanthropy</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <br>
+            <label for="city" class="input-label">City</label><br>
+            <input type="text" id="city" name="city" class="input-field"><br><br>
+
+            <label for="primary_contact" class="input-label">Primary Contact Person</label><br>
+            <input type="text" id="primary_contact" name="primary_contact" class="input-field"><br><br>
+
+            <label for="email" class="input-label">Email</label><br>
+            <input type="text" id="email" name="email" class="input-field"><br><br>
+
+            <label for="mobile_no" class="input-label">Mobile No</label><br>
+            <input type="tel" id="mobile_no" name="mobile_no" class="input-field"><br><br>
+
+            <label for="website" class="input-label">Website</label><br>
+            <input type="text" id="website" name="website" class="input-field"><br><br>
+
+            <label for="foss_usage_rate" class="input-label">How would you rate your organisation's current use of Free and Open-Source Software (FOSS)?
+            </label><br>
+            <div class="select">
+                <select id="foss_usage_rate" name="foss_usage_rate">
+                    <option disabled selected value></option>
+                    <option value="We exclusively use FOSS">We exclusively use FOSS</option>
+                    <option value="We use a mix of FOSS and proprietary software">We use a mix of FOSS and proprietary software</option>
+                    <option value="We use very little FOSS">We use very little FOSS</option>
+                    <option value="We don't currently use FOSS, but we're Interested in adopting it.">We don't currently use FOSS, but we're Interested in adopting it.</option>
+                </select>
+            </div><br>
+
+            <label for="expectations_oasis" class="input-label">What are your expectations from OASIS
+            </label><br>
+            <textarea id="expectations_oasis" name="expectations_oasis" class="input-field"></textarea><br><br>
+
+            <label for="org_mission_allignment" class="input-label">How does your organisation's mission align with OASIS's goal of leveraging FOSS for social innovation and sustainability?
+            </label><br>
+            <textarea id="org_mission_allignment" name="org_mission_allignment" class="input-field"></textarea><br><br>
+
+            <button type="submit" style="max-width: 123px; font-weight: 600; display: flex; justify-self: end; font-size: 14px; padding: 5px 10px; max-height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #000; color: #ffffff;">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('simpleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            frappe.call({
+                type: 'POST',
+                method: "oasis.www.join-oasis.index.validate_form",
+                args: {
+                    data: { 
+                        name: document.getElementById('name').value, 
+                        category: document.getElementById('category').value,
+                        city: document.getElementById('city').value,
+                        primary_contact: document.getElementById('primary_contact').value,
+                        email: document.getElementById('email').value,
+                        mobile_no: document.getElementById('mobile_no').value,
+                        website: document.getElementById('website').value,
+                        foss_usage_rate: document.getElementById('foss_usage_rate').value,
+                        expectations_oasis: document.getElementById('expectations_oasis').value,
+                        org_mission_allignment: document.getElementById('org_mission_allignment').value,
+                     },
+                },
+                callback: function(r) {
+                    if (!r.exc) {
+                        frappe.msgprint('Name saved: ' + r.message);
+                        document.getElementById('name').value = '';
+                    } else {
+                        frappe.msgprint('Error: ' + r.exc);
+                    }
+                }
+            });
+        });
+</script>
+{% endblock %}
+
+
+  

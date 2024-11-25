@@ -34,6 +34,7 @@
    "fieldname": "logo",
    "fieldtype": "Attach Image",
    "label": "Logo",
+   "make_attachment_public": 1,
    "reqd": 1
   },
   {
@@ -62,7 +63,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-15 20:40:17.107569",
+ "modified": "2024-11-25 16:31:55.190171",
  "modified_by": "Administrator",
  "module": "Oasis",
  "name": "partners",
@@ -80,6 +81,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1
   }
  ],
  "sort_field": "creation",

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script type="text/javascript" src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+    <!-- <link rel="dns-prefetch" href="//trial.localhost:8000"> -->
+
     <!-- <link type="text/css" rel="stylesheet" href="/assets/frappe/css/bootstrap.css"> -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -13,28 +15,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link rel="stylesheet" href="/assets/oasis/css/oasis.css">
-    <title>Oasis</title>
+    <title>{% block title %}{{ title | string }}{% endblock %}</title>
+    <style>
+        .join:hover{
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #F5E253;;
+            border:  1px solid rgba(14, 18, 27, 0.24), 0px 0px 0px 1px #F5E253;;
+        }
+        .join{
+            width: 82px; 
+            font-weight: 700; 
+            height: 46px; 
+            border: 0.5px solid rgba(0, 0, 0, 0.16); 
+            border-radius: 8px; 
+            background-color: #F5E253;
+            cursor: pointer;
+        }
+        .forum-btn:hover{
+            background: #efeee3;
+            border: none;
+        }
+        .forum-btn{
+            width: 148px; 
+            font-weight: 700; 
+            height: 46px; 
+            border: 0.5px solid rgba(0, 0, 0, 0.16); 
+            border-radius: 8px; 
+            background-color: #f8f7ef;
+        }
+        .menu-icon{
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .nav-items{
+                display: none !important;
+            }
+            .nav-btns{
+                display: none !important;
+            }
+            .nav-menu{
+                padding: 0px 16px !important;
+            }
+            .menu-icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .logo{
+                width: 86px !important;
+                height: 28px !important;
+            }
+            .logo-container{
+                padding: 0px !important;
+            }
+            .footer-vector{
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav style="background-color: #f8f7ef; width: 100%; height: 100px; display: flex; align-items: center;">
-        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0px 146px;">
-            <div style="max-width: 341px; height: 46px; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 700; padding: 12px 16px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px;">
-                <p style="margin: 0px; cursor: pointer;">About</p>
-                <p style="margin: 0px; cursor: pointer;">Members</p>
-                <p style="margin: 0px; cursor: pointer;">Forum</p>
-                <p style="margin: 0px; cursor: pointer;">Activities</p>
+    <nav style="background-color: #f8f7ef; width: 100%; min-height: 100px; display: flex; align-items: center;">
+        <div class="nav-menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0px 146px;">
+            <div class="nav-items" style="display: flex; align-items: center; justify-content: center; gap: 10px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 700; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px;">
+                <a style="color: #000; text-decoration: none;" href="/about"><p style="margin: 0px; cursor: pointer; padding: 12px 15px;">About</p></a>
+                <a style="color: #000; text-decoration: none;" href="/members"><p style="margin: 0px; cursor: pointer; padding: 12px 15px;">Members</p></a>
+                <a style="color: #000; text-decoration: none;" href="/"><p style="margin: 0px; cursor: pointer; padding: 12px 15px;">Forum</p></a>
+                <a style="color: #000; text-decoration: none;" href="/"><p style="margin: 0px; cursor: pointer; padding: 12px 15px;">Activities</p></a>
             </div>
-            <div style="cursor: pointer;">
-                <img src="/assets/oasis/images/logo.svg" alt="">
+            <div class="logo-container" style="cursor: pointer; padding: 8px;">
+                <a href="/"><img class="logo" src="/assets/oasis/images/logo.svg" alt=""></a>
             </div>
-            <div style="font-size: 14px; font-family: Inter, sans-serif; display: flex; gap: 16px;">
-                <button style="width: 148px; font-weight: 700; height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #f8f7ef;"> Forum - let's chat</button>
-                <button style="width: 82px; font-weight: 700; height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #F5E253;"> Join Us </button>
+            <div class="nav-btns" style="font-size: 14px; font-family: Inter, sans-serif; display: flex; gap: 16px;">
+                <a href="/"><button class="forum-btn"> Forum - let's chat</button></a>
+                <a href="/join-oasis"><button class="join"> Join Us </button></a>
+            </div>
+            <div class="menu-icon">
+                <img src="/assets/oasis/images/Icon (7).svg" alt="">
             </div>
         </div>
     </nav>
@@ -42,5 +103,10 @@
     <div class="main" style="width: 100%; height: auto; background-color: #f8f7ef;">
         {% block content %}{% endblock %}
     </div>
+    <footer>
+        <div style="background-color: #f8f7ef; width: 100%; height: auto; display: flex; align-items: center; justify-content: center;">
+            <img class="footer-vector" src="/assets/oasis/images/footer_vector.svg" alt="">
+        </div>
+    </footer>
 </body>
 </html>

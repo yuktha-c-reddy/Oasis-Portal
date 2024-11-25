@@ -4,7 +4,18 @@ app_publisher = "Anu Ouseph"
 app_description = "Oasis Web"
 app_email = "anuouseph04@gmail.com"
 app_license = "mit"
-app_include_css = "/assets/oasis/css/oasis.css"
+app_include_css = "/assets/oasis/css/home.css"
+web_include_css = "/assets/oasis/css/home.css"
+
+home_page = "home"
+website_template = "templates/layouts/layout.html"
+
+
+
+
+# website_route_rules = [
+#     {"from_route": "/form", "to_route": "/join-oasis"}
+# ]
 
 
 # Apps
