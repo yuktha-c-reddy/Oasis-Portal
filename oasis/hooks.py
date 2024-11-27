@@ -10,7 +10,20 @@ web_include_css = "/assets/oasis/css/home.css"
 home_page = "home"
 website_template = "templates/layouts/layout.html"
 
-
+doc_events = {
+    "partners": {
+        "on_update": "oasis.www.home.index.clear_specific_cache",
+    },
+    "case studies": {
+        "on_update": "oasis.www.home.index.clear_specific_cache",
+    },
+    "case study tools": {
+        "on_update": "oasis.www.home.index.clear_specific_cache",
+    },
+    "cards": {
+        "on_update": "oasis.www.home.index.clear_specific_cache",
+    },
+}
 
 
 # website_route_rules = [

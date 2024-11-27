@@ -1,6 +1,15 @@
 p{
     margin: 0;
 }
+::-webkit-scrollbar {
+    display: none; 
+}
+.case-active{
+    border-left: 4px solid rgba(0, 0, 0, 0.16);
+}
+.case-inactive{
+    border-left: 4px solid transparent;
+}
 .tools-left-header{
     font-family: 'Bricolage Grotesque';
     font-style: normal;
@@ -85,4 +94,312 @@ p{
     letter-spacing: -0.01em;
     color: #000000;
     max-width: 340px;
+}
+
+.main-container{
+    width: 100%;
+    padding: 0px 146px;
+}
+.cards-container {
+    contain: layout;
+    will-change: transform;
+    content-visibility: auto;
+}
+.inner-cards {
+    width: 442px;
+    height: 619px;
+    flex: 0 0 442px;
+}
+.card-row{
+    display: flex; 
+    gap: 36px; 
+    overflow-x: scroll; 
+    padding-left: 146px; 
+    padding-right: 146px; 
+    margin: 0 -146px; 
+    scroll-padding-left: 146px; 
+    -webkit-overflow-scrolling: touch; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    -webkit-scrollbar-width: none;
+}
+.participate-btn:hover{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #000;
+}
+img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.card-heading{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 116%;
+    letter-spacing: -0.04em;
+    color: #000000;
+    display: none;
+}
+.casestudy-lrg-scrn-main{
+    display: flex !important;
+}
+.casetudy-sml-scrn-main{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .main-container{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    .inner-container {
+        flex-direction: column !important;
+        padding: 0px !important;
+    }
+    .right-container{
+        height: auto !important;
+        gap: 0px !important;
+    } 
+    .right-bottom-p{
+        font-size: 20px !important;
+        line-height: 24px !important;
+    }
+    .right-bottom{
+    width: 100% !important;
+    }
+    .right-top{
+        display: none !important;
+    }
+    .left-outer-container{
+        padding: 0px 16px !important;
+        width: 100% !important;
+    }
+    .left-container {
+        width: 100% !important;
+        height: auto !important;
+        padding: 32px 16px !important;
+        gap: 40px !important;
+    }
+    .partners{
+        padding: 32px !important;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 19px !important;    
+        justify-content: center;
+    }
+    .partners a{
+        display: contents !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .partner-logo{
+        max-width: 22% !important;
+        height: 32px !important;  
+        margin: 0 !important;
+        object-fit: contain !important;
+    }
+    .cards{
+        padding: 32px 16px !important;
+    }
+    .inner-card1{
+        display: none !important;
+    }
+    .inner-cards{
+        width: 259px !important;
+        flex-basis: 259px !important;
+        height: 362px !important;
+        padding: 32px 16px !important;
+    }
+    .card-row{
+        gap: 21px !important;
+        padding-left: 16px !important; 
+        padding-right: 16px !important; 
+        margin: 0 -16px !important; 
+        scroll-padding-left: 16px !important; 
+    }
+    .inner-cards p {
+        font-size: 14px !important;
+        line-height: 17px !important;
+    }
+    .card-vector{
+        height: 110px !important;
+    }
+    .card-btn{
+        font-size: 9px !important;
+        line-height: 11px !important;
+        padding: 7px 9px !important;
+    }
+    .card-heading{
+        display: block;
+    }
+    .home-banner1{
+        width: 224px !important;
+        height: 182px !important;
+    }
+    .sect1-header{
+        font-size: 28px !important;
+        line-height: 40px !important;
+    }
+    .sect1-sub{
+        font-size: 14px !important;
+        line-height: 19px !important;
+    }
+    .casestudy-component{
+        background-color: #f8f7ef !important;
+        padding: 34px 16px !important;
+    }
+    .casestudy-lrg-scrn-main{
+        display: none !important;
+    }
+    .casetudy-sml-scrn-main{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .tools{
+        display: none !important;
+    }
+    .casestudy-header{
+        font-size: 20px !important;
+        line-height: 23px !important;
+    }
+    .casestudy-sub{
+        font-size: 14px !important;
+        line-height: 19px !important;
+    }
+    .casestudy-innercomponent{
+        gap: 24px !important;
+    }
+    .benefits-header{
+        font-size: 20px !important;
+        line-height: 23px !important;
+    }
+    .benefits-sub{
+        font-size: 14px !important;
+        line-height: 19px !important;
+    }
+    .benefits{
+        padding: 0px 16px 34px 16px !important;
+        gap: 34px !important;
+    }
+    .benefits-cards{
+        flex-wrap: wrap;
+        padding: 24px 16px !important;
+    }
+    .benefit-card{
+        gap: 14px !important;
+        width: 100% !important;
+    }
+    .benefits-card-title{
+        font-size: 20px !important;
+        line-height: 23px !important;
+    }
+    .benefits-card-sub{
+        font-size: 14px !important;
+        line-height: 19px !important;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .main-container{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    .inner-container{
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0px !important;
+    }
+    .left-container {
+        height: auto !important;
+        width: 713px !important;
+        gap: 40px !important;
+    }
+    .right-bottom{
+        height: 300px !important;
+        width: 713px !important;
+    }
+    .right-top{
+        display: none !important;
+    }
+    .partners{
+        padding: 56px !important;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .cards{
+        padding: 56px 56px !important;
+    }
+    .inner-cards{
+        padding: 56px !important;
+    }
+    .card-row{
+        padding-left: 56px !important; 
+        padding-right: 56px !important; 
+        margin: 0 -56px !important; 
+        scroll-padding-left: 56px !important; 
+    }
+    .casestudy-component{
+        padding: 56px 56px !important;
+    }
+    .casestudy-lrg-scrn-main{
+        display: none !important;
+    }
+    .casetudy-sml-scrn-main{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .tools{
+        display: none !important;
+    }
+    .benefits{
+        padding: 56px 56px 56px 56px !important;
+        gap: 34px !important;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .main-container{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    .inner-container{
+        width: 100% !important;
+        padding: 0px !important;
+        justify-content: center !important;
+    }
+    .left-container {
+        height: 686px !important;
+        max-width: 803px !important;
+    }
+    .partners{
+        padding: 56px !important;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .cards{
+        padding: 56px 56px !important;
+    }
+    .inner-cards{
+        padding: 56px !important;
+    }
+    .card-row{
+        padding-left: 56px !important; 
+        padding-right: 56px !important; 
+        margin: 0 -56px !important; 
+        scroll-padding-left: 56px !important; 
+    }
+    .casestudy-component{
+        padding: 56px 56px !important;
+    }
+    .tools{
+        padding: 56px 56px !important;
+    }
+
+    .tools-content{
+        max-width: 545px !important;
+    }
+    .benefits{
+        padding: 0px 56px 56px 56px !important;
+        gap: 34px !important;
+    }
 }

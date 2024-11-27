@@ -12,18 +12,18 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class Testorganisation(UnitTestCase):
+class Testcards(UnitTestCase):
 	"""
-	Unit tests for organisation.
+	Unit tests for cards.
 	Use this class for testing individual functions and methods.
 	"""
 
 	pass
 
 
-class Testorganisation(IntegrationTestCase):
+class Testcards(IntegrationTestCase):
 	"""
-	Integration tests for organisation.
+	Integration tests for cards.
 	Use this class for testing interactions between multiple components.
 	"""
 
