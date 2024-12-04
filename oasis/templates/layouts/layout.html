@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/assets/oasis/css/oasis.css?version=1.01">
     <title>{% block title %}{{ title | string }}{% endblock %}</title>
 </head>
-<body>
+<body style="min-height: 100vh;">
     <nav style="background-color: #f8f7ef; width: 100%; min-height: 100px; display: flex; align-items: center;">
         <div class="nav-menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0px 146px;">
             <div class="nav-items" style="display: flex; align-items: center; justify-content: center; gap: 10px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 700; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px;">
@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    <div class="main" style="width: 100%; height: auto; background-color: #f8f7ef;">
+    <div class="main" style="width: 100%; height: auto; flex: 1; background-color: #f8f7ef;">
         {% block content %}{% endblock %}
     </div>
 

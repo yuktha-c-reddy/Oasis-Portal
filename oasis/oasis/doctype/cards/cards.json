@@ -1,24 +1,73 @@
 {
  "actions": [],
- "allow_rename": 1,
- "creation": "2024-11-27 12:24:15.457363",
+ "autoname": "autoincrement",
+ "creation": "2024-12-04 14:20:22.095741",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_vbw7"
+  "background_color",
+  "illustration",
+  "content_summary",
+  "cta_button_1_label",
+  "cta_button_1_link",
+  "cta_button_2_label",
+  "cta_button_2_link"
  ],
  "fields": [
   {
-   "fieldname": "section_break_vbw7",
-   "fieldtype": "Section Break"
+   "fieldname": "background_color",
+   "fieldtype": "Color",
+   "in_list_view": 1,
+   "label": "Background",
+   "reqd": 1
+  },
+  {
+   "fieldname": "illustration",
+   "fieldtype": "Attach Image",
+   "label": "Illustration",
+   "reqd": 1
+  },
+  {
+   "fieldname": "content_summary",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Content Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cta_button_1_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CTA Button 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cta_button_1_link",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "CTA Link 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cta_button_2_label",
+   "fieldtype": "Data",
+   "label": "CTA Button 2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cta_button_2_link",
+   "fieldtype": "Small Text",
+   "label": "CTA Link 2",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-27 12:24:15.457363",
+ "modified": "2024-12-04 14:27:07.467734",
  "modified_by": "Administrator",
  "module": "Oasis",
  "name": "cards",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {
@@ -30,6 +79,7 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }

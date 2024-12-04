@@ -40,10 +40,8 @@ def get_cached_cards():
     cached_data = frappe.cache().get_value(cache_key)
     
     if cached_data:
-        print("cards cached data",cache_key)
         return cached_data
 
-    print("cards cached data gone",cache_key)
     cards = frappe.db.get_list('cards',
         filters={},  
         fields=['background_color', 'illustration', 'content_summary', 'cta_button_1_label', 'cta_button_2_label', 'cta_button_1_link', 'cta_button_2_link'],
@@ -59,10 +57,8 @@ def get_cached_partners():
     cached_data = frappe.cache().get_value(cache_key)
     
     if cached_data:
-        print("partners cached data",cache_key)
         return cached_data
 
-    print("partners cached data gone",cache_key)
     partners = frappe.db.get_list('partners', 
         filters={}, 
         fields=['partner_name', 'key_partner', 'logo', 'icon', 'url'],
@@ -82,10 +78,8 @@ def get_cached_casestudies():
     cached_data = frappe.cache().get_value(cache_key)
     
     if cached_data:
-        print("casestudies cached data",cache_key)
         return cached_data
         
-    print("Cache MISS for case studies",cache_key)
     casestudies = frappe.db.sql("""
         SELECT 
             cs.name, cs.title, cs.challenge, cs.solution, 
