@@ -1,10 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+  
 body{
     max-width: 1480px;
     background-color: #f8f7ef;
     display: flex;
     flex-direction: column;
     margin: 0px auto;
+    -webkit-overflow-scrolling: touch;
 }
+.section {
+    will-change: transform, opacity;
+    transition: all 0.3s ease;
+  }
 .join:hover{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #F5E253;;
     border:  1px solid rgba(14, 18, 27, 0.24), 0px 0px 0px 1px #F5E253;;

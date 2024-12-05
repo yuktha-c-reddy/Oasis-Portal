@@ -1,3 +1,8 @@
+.section {
+    will-change: transform, opacity;
+    transition: all 0.3s ease;
+  }
+  
 p{
     margin: 0;
 }
