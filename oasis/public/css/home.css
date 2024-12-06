@@ -9,12 +9,7 @@ p{
 ::-webkit-scrollbar {
     display: none; 
 }
-.case-active{
-    border-left: 4px solid rgba(0, 0, 0, 0.16);
-}
-.case-inactive{
-    border-left: 4px solid transparent;
-}
+
 .tools-left-header{
     font-family: 'Bricolage Grotesque';
     font-style: normal;
@@ -169,7 +164,7 @@ img {
         line-height: 24px !important;
     }
     .right-bottom{
-    width: 100% !important;
+        width: 100% !important;
     }
     .right-top{
         display: none !important;
@@ -250,7 +245,7 @@ img {
     }
     .casestudy-component{
         background-color: #f8f7ef !important;
-        padding: 34px 16px !important;
+        padding: 16px 16px !important;
     }
     .casestudy-lrg-scrn-main{
         display: none !important;
@@ -258,9 +253,6 @@ img {
     .casetudy-sml-scrn-main{
         display: flex !important;
         flex-direction: column !important;
-    }
-    .tools{
-        display: none !important;
     }
     .casestudy-header{
         font-size: 20px !important;
@@ -282,7 +274,6 @@ img {
         line-height: 19px !important;
     }
     .benefits{
-        padding: 0px 16px 34px 16px !important;
         gap: 34px !important;
     }
     .benefits-cards{
@@ -294,12 +285,13 @@ img {
         width: 100% !important;
     }
     .benefits-card-title{
-        font-size: 20px !important;
-        line-height: 23px !important;
+        font-size: 16px !important;
+        line-height: 20px !important;
     }
     .benefits-card-sub{
         font-size: 14px !important;
         line-height: 19px !important;
+        color: rgba(0, 0, 0, 0.72) !important;
     }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -344,7 +336,14 @@ img {
         scroll-padding-left: 56px !important; 
     }
     .casestudy-component{
+        background-color: #f8f7ef !important;
         padding: 56px 56px !important;
+    }
+    .casestudy-header{
+        color: black !important;
+    }
+    .casestudy-sub{
+        color: black !important;
     }
     .casestudy-lrg-scrn-main{
         display: none !important;

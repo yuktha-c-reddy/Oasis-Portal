@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
           section,
           {
             opacity: 0.9,
-            y: 30, 
+            y: 0, 
             scale: 1,
           },
           {
@@ -28,25 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
-    const toolItems = document.querySelectorAll('.tool-item');
+    // const toolItems = document.querySelectorAll('.tool-item');
 
-    toolItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            gsap.to(item, {
-                rotationY: 180,
-                scale: 1.2,
-                duration: 0.6,
-                ease: "back.out(1.7)"
-            });
-        });
+    // toolItems.forEach(item => {
+    //     item.addEventListener('mouseenter', () => {
+    //         gsap.to(item, {
+    //             rotationY: 180,
+    //             scale: 1.2,
+    //             duration: 0.6,
+    //             ease: "back.out(1.7)"
+    //         });
+    //     });
 
-        item.addEventListener('mouseleave', () => {
-            gsap.to(item, {
-                rotationY: 0,
-                scale: 1,
-                duration: 0.6,
-                ease: "power2.inOut"
-            });
-        });
-    });
+    //     item.addEventListener('mouseleave', () => {
+    //         gsap.to(item, {
+    //             rotationY: 0,
+    //             scale: 1,
+    //             duration: 0.6,
+    //             ease: "power2.inOut"
+    //         });
+    //     });
+    // });
 })
