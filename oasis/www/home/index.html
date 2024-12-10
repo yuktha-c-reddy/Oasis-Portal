@@ -5,14 +5,47 @@
 {% block content %}
 <link rel="preconnect" href="/assets/oasis/images">
 <link rel="dns-prefetch" href="/assets/oasis/images">
-<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.11">
-<script src="/assets/oasis/js/scroll_animations.js?version=2.05"></script>
+<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.16">
+<!-- <script src="/assets/oasis/js/scroll_animations.js?version=2.05"></script> -->
 
 <style>
+    .main-button {
+        width: auto;
+        padding: 12px 16px ;
+        font-weight: 700;
+        border-radius: 8px;
+        border: 0.5px solid rgba(0, 0, 0, 0.16);
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        overflow: visible;
+        text-decoration: none;
+        transition: all 400ms ease-in-out;
+    }
+    .participate-btn {
+        background-color: #000;
+        color: #ffffff;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .participate-btn:hover {
+        transform: scale(1.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .sec-btn {
+        background-color: #f8f7ef;
+        color: #000;
+    }
+    .sec-btn:hover {
+        transform: scale(1.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    img{
+        mix-blend-mode: darken;
+    }
     .tools-sml-scrn{
         display: none !important;
+        mix-blend-mode: darken;
     }
-    .casestudy-header{
+    .casestudy-top-container{
         display: flex;
         align-items: start;
         justify-content: space-between;
@@ -20,9 +53,11 @@
     .case-active{
         background-color: #ffffff;
         color: #000000 !important;
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
      }
     .case-inactive{
         color: #ffffff;
+        border: 0.5px solid transparent; 
     }
     .case-study-btn{
         display: flex;
@@ -42,6 +77,12 @@
         line-height: 158%;
         letter-spacing: -0.01em;
         color: #3CB645;
+    }
+    .tool-item{
+        background-color: #f8f7ef;
+    }
+    .tool-item img{
+        mix-blend-mode: darken;
     }
     @media screen and (max-width: 768px) {
         .casestudy-header{
@@ -115,7 +156,7 @@
 <section class="section_1">
     <div class="main-container">
        <div class="inner-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
-        <div class="left-outer-container">
+        <div class="left-outer-container fade-in">
             <div class="left-container" style="width: 813px; height: 686px; background-color: white; border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 64px; display: flex; flex-direction: column; gap: 64px;">
                 <div>
                     <img class="home-banner1" src="/assets/oasis/images/banner1.svg" type="image/svg+xml" alt="">
@@ -132,13 +173,13 @@
                         </p>
                     </div>
                     <div style="font-size: 14px; font-family: Inter, sans-serif; display: flex; gap: 24px;">
-                        <a href="/"><button class="participate-btn" style="width: 123px; font-weight: 700; height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #000; color: #ffffff;"> Participate -></button></a>
-                        <a href="/join-oasis"><button class="sec-btn" style="width: 77px; font-weight: 700; height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #f8f7ef;"> Join -></button></a>
+                        <a href="/"><button class="participate-btn main-button" > Participate -></button></a>
+                        <a href="/join-oasis"><button class="sec-btn main-button" > Join -></button></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="right-container" style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
+        <div class="right-container fade-in" style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
             <div class="right-top" style="width: 345px;">
                 <img src="/assets/oasis/images/banner2.svg" alt="">
             </div>
@@ -178,10 +219,10 @@
 <section class="section">
     <div style="width: 100%;">
         <div class="cards" style="background-image: url('/assets/oasis/images/bgvector-min.svg'); background-color: #f8f7ef; background-repeat: no-repeat; background-size: cover; width: 100%; padding: 128px 146px; display: flex; flex-direction: column; gap: 18px;">
-            <div class="card-heading">
+            <div class="card-heading fade-in">
                 <p>How we achieve it?</p>
             </div>
-            <div class="card-row">
+            <div class="card-row fade-in">
                 <div class="inner-card1 card-panel" style="width: 442px; flex-basis: 442px; flex-grow: 0; flex-shrink: 0; height: 619px; padding: 64px 32px; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; background-color: #ffffff; ">
                     <p style="font-family: 'Bricolage Grotesque', sans-serif; margin: 0px; font-size: 48px; font-weight: 600; line-height: 55px; color: #000000; max-width: 242px;">
                         How we achieve it?
@@ -211,10 +252,10 @@
         </div>
     </div>
 </section>
-<section class="section" style="width: 100%;">
+<section class="section case-study-section" style="width: 100%; min-height: 100vh;">
     <div class="casestudy-component" style="width: 100%; padding: 128px 146px; background-color: #3CB645; background-image: url('/assets/oasis/images/casestudy_vector.svg');">
         <div class="casestudy-innercomponent" style="display: flex; flex-direction: column; gap: 64px;">
-            <div class="casestudy-header">
+            <div class="casestudy-top-container">
                 <div style="display: flex; flex-direction: column; gap: 12px;">
                     <p class="casestudy-header" style="font-family: 'Bricolage Grotesque', sans-serif; margin: 0px; font-size: 32px; font-weight: 600; line-height: 37px; color: #ffffff;">Here are a few impact stories. </p>
                     <p class="casestudy-sub" style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: #ffffff;">We helped these organizations to adapt FOSS and become more impactful.</p>
@@ -224,8 +265,8 @@
                 </div>
             </div>
             <div class="casestudy-lrg-scrn-main" style="display: flex; width: 100%; flex-direction: column; contain: layout; will-change: contents;">
-                <div class="case-study-right" style="display: flex; flex-direction: column;">
-                    <div style="display: flex;">
+                <div class="case-study-right" style="display: flex; flex-direction: column; ">
+                    <div style="display: flex; ">
                         {% for item in casestudies %}
                         <div id="casestudy-container" data-casestudy-name="{{ item.name }}" style="cursor: pointer; width: auto; flex:1; color: #ffffff; height: 96px; padding: 24px 32px; display: flex; flex-direction: column; gap: 4px;">
                             <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px;">{{item.title}}</p>
@@ -234,9 +275,9 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="case-study-left" style="display: flex; flex: 1; gap: 23px; padding: 42px 42px 98px 42px; background-color: #ffffff;">
+                <div class="case-study-left transition-all duration-700 fade-in-out" style="display: flex; flex: 1; gap: 23px; padding: 42px 42px 98px 42px; background-color: #ffffff;">
                     <div style="display: flex; flex: 1; flex-direction: column; gap: 23px;">
-                        <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
+                        <div class="fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
                             <div>
                                 <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Challenge</p>
                             </div>
@@ -251,13 +292,13 @@
                                 </p>
                             </div>
                         </div>
-                        <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; gap: 20px;">
+                        <div class="fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; gap: 20px;">
                             <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Solution Partner</p>
                             <img id="solution-partner" src="{{casestudies[0].solution_partner}}" alt="">
                         </div>
                     </div>
                     <div style="display: flex; flex: 1; flex-direction: column; gap: 23px;">
-                        <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
+                        <div class="fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
                             <div>
                                 <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Solution</p>
                             </div>
@@ -267,7 +308,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; flex-wrap: wrap; gap: 20px;">
+                        <div class="fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; flex-wrap: wrap; gap: 20px;">
                             <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Tool used</p>
                             <div id="tool-list" style="display: flex; gap: 24px;">
                                 {% for item in casestudies[0].tools_used %}
@@ -278,10 +319,10 @@
                     </div>
                 </div>
             </div>
-            <div class="casetudy-sml-scrn-main" style="width: 100%; display: none; padding: 16px 0px;">
+            <div class="casetudy-sml-scrn-main" style="width: 100%; height:auto; display: none; padding: 16px 0px;">
                 {% set colors = ['#FF94B8', '#F5E253', '#85B4EF', '#3CB645'] %}
                 {% for item in casestudies %}
-                <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0px 16px;">
                     <div>
                         <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px; color: rgba(0, 0, 0, 0.86);">{{item.title}}</p>
                         <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: rgba(0, 0, 0, 0.56);">cupabangalore.org</p>
@@ -304,13 +345,13 @@
                     {% for img in tools %}
                     <div style=" flex: 0 0 25%; background-color: transparent; display: flex; justify-content: center; align-items: center; border-right: 0.5px solid rgba(0, 0, 0, 0.16); border-bottom: 0.5px solid rgba(0, 0, 0, 0.16); cursor: pointer;">
                         <div class="tool-item" style=" width: 60%; height: 60%; display: flex; justify-content: center; align-items: center; perspective: 1000px; ">
-                            <img style="width: 45px; height: 45px;" src="{{img.logo}}" alt="">
+                            <img style="width: 45px; height: 45px; mix-blend-mode: darken;" src="{{img.logo}}" alt="">
                         </div>
                     </div>
                     {% endfor %}
                 </div>
                 <div class="tools-content" style="width: 565px; display: flex; justify-content: center; align-items: center; ">
-                    <div style="box-sizing: border-box; max-width: 428px; display: flex; flex-direction: column; gap: 24px;">
+                    <div class="fade-in" style="box-sizing: border-box; max-width: 428px; display: flex; flex-direction: column; gap: 24px;">
                         <div>
                             <p class="tools-left-header">Tools that creates value</p>
                         </div>
@@ -329,7 +370,7 @@
                     <div id="scroll-container" style="display: flex; white-space: nowrap;">
                         {% for img in tools %}
                             <div style="height: 105px; width: 105px; padding: 0px 32px; display: flex; background-color: transparent; justify-content: center; align-items: center;">
-                                <img style="width: 30px; height: 30px;" src="{{ img.logo }}" alt="">
+                                <img style="width: 30px; height: 30px; mix-blend-mode: darken;" src="{{ img.logo }}" alt="">
                             </div>
                         {% endfor %}
                     </div>
@@ -354,11 +395,11 @@
 </section>
 <section class="section" style="width: 100%;">
     <div class="benefits" style="padding: 0px 146px 128px 146px; display: flex; flex-direction: column; gap: 64px;">
-        <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="fade-in" style="display: flex; flex-direction: column; gap: 12px;">
             <p class="benefits-header">Benefits of FOSS</p>
             <p class="benefits-sub">By adopting FOSS, organisations in the social sector can leverage powerful tools, reduce costs, and contribute to a collaborative ecosystem of technological innovation.</p>
         </div>
-        <div class="benefits-inner-cards" style="border: 0.5px solid rgba(0, 0, 0, 0.16);">
+        <div class="benefits-inner-cards fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16);">
             <div class="benefits-cards" style="display: flex; justify-content: center; gap: 24px; border-bottom: 0.5px solid rgba(0, 0, 0, 0.16); padding: 40px;">
                 <div class="benefit-card" style="width: 340px; display: flex; flex-direction: column; gap: 24px;">
                     <div>
@@ -434,7 +475,26 @@
         const casestudiesMap = new Map(casestudiesData.map(study => [study.name, study]));
     
         if (caseStudyContainers.length) {
-            caseStudyContainers[0].classList.add('case-active');
+            // caseStudyContainers[0].classList.add('case-active');
+
+            gsap.fromTo(caseStudyContainers[0], 
+                        {
+                            backgroundColor: 'transparent',
+                            color: '#ffffff',
+                            opacity: 0,
+                            scale: 1
+                        },
+                        {
+                            backgroundColor: 'rgba(255,255,255,1)', 
+                            color: '#000000',
+                            border: '0.5px solid rgba(0, 0, 0, 0.16)',
+                            opacity: 1,
+                            scale: 1,
+                            duration: 0.6,
+                            ease: "power2.out",
+                            stagger:2,
+                        }
+                    );
         }
     
         document.querySelector('.case-study-right').addEventListener('click', (event) => {
@@ -446,25 +506,79 @@
         });
     
         function updateCaseStudyContent(caseStudyName, currentTarget) {
-            requestAnimationFrame(() => {
-                const caseStudy = casestudiesMap.get(caseStudyName);
-                if (!caseStudy) return;
-    
-                challengeTextEl.textContent = caseStudy.challenge;
-                solutionTextEl.textContent = caseStudy.solution;
-                categoryTextEl.textContent = caseStudy.category_tag;
-                solutionPartnerEl.src = caseStudy.solution_partner;
-    
-                toolListContainer.innerHTML = caseStudy.tools_used
-                    .map(tool => `<img src="${tool.logo}" alt="${tool.name}">`)
-                    .join('');
-    
-                caseStudyContainers.forEach(container => {
-                    container.classList.toggle('case-active', container === currentTarget);
-                    container.classList.toggle('case-inactive', container !== currentTarget);
-                });
+            const caseStudy = casestudiesMap.get(caseStudyName);
+            if (!caseStudy) return;
+
+            gsap.to('.fade-in', {
+                opacity: 0,
+                y: 20,
+                duration: 0.3,
+                onComplete: () => {
+                    challengeTextEl.textContent = caseStudy.challenge;
+                    solutionTextEl.textContent = caseStudy.solution;
+                    categoryTextEl.textContent = caseStudy.category_tag;
+                    solutionPartnerEl.src = caseStudy.solution_partner;
+
+                    toolListContainer.innerHTML = caseStudy.tools_used
+                        .map(tool => `<img src="${tool.logo}" alt="${tool.name}">`)
+                        .join('');
+
+                    gsap.fromTo(
+                        '.fade-in',
+                        { opacity: 0.2, y: 20 },
+                        { opacity: 1, y: 0, duration: 0.3 }
+                    );
+
+                    // caseStudyContainers.forEach(container => {
+                    //     container.classList.toggle('case-active', container === currentTarget);
+                    //     container.classList.toggle('case-inactive', container !== currentTarget);
+                    // });
+                    caseStudyContainers.forEach(container => {
+                        if (container === currentTarget) {
+                    // Explicit fade-in for active container
+                    gsap.fromTo(container, 
+                        {
+                            backgroundColor: 'transparent',
+                            color: '#ffffff',
+                            opacity: 0,
+                            scale: 1
+                        },
+                        {
+                            backgroundColor: 'rgba(255,255,255,1)', 
+                            color: '#000000',
+                            border: '0.5px solid rgba(0, 0, 0, 0.16)',
+                            opacity: 1,
+                            scale: 1,
+                            duration: 1.2,
+                            ease: "power2.out",
+                            stagger: 0.2,
+                        }
+                    );
+                } else {
+                    // Fade out for inactive containers
+                    gsap.to(container, {
+                        backgroundColor: 'transparent',
+                        color: '#ffffff',
+                        border: '0.5px solid transparent',
+                        opacity: 1,
+                        duration: 0.1,
+                        ease: "power2.out"
+                    });
+                }
+                    //     gsap.to(container, {
+                    //         opacity: container === currentTarget ? 1 : 0.9,
+                    //         duration: 0.3,
+                    //         onComplete: () => {
+                    //             // Add/remove classes after animation
+                    //             container.classList.toggle('case-active', container === currentTarget);
+                    //             container.classList.toggle('case-inactive', container !== currentTarget);
+                    //         }
+                    //     });
+                    });
+                }
             });
         }
+
 
         const container = document.getElementById("scroll-container");
         const clones = container.innerHTML; 
@@ -477,6 +591,70 @@
             repeat: -1, 
             duration: 25, 
         });
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray(".fade-in").forEach((section) => {
+            gsap.from(section, {
+                opacity: 0,
+                y: 50, 
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                trigger: section,
+                start: "top 80%", 
+                toggleActions: "play none none reverse", 
+                },
+            });
+        });
+
+        gsap.fromTo(
+            ".partner-logo", 
+            { 
+                opacity: 0, 
+                y: 20, 
+                scale: 0.8
+            },
+            { 
+                opacity: 1, 
+                scale: 1,
+                y: 0, 
+                duration: 0.4, 
+                stagger: 0.2, 
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".partners", 
+                    start: "top 80%", 
+                    toggleActions: "play none none reverse", 
+                }, 
+            }
+        );
+
+        const toolItems = document.querySelectorAll(".tool-item");
+
+        gsap.fromTo(
+            ".tool-item",
+            {
+                scale: 0,
+                opacity: 0,
+            },
+            {
+                scale: 1,
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.out",
+                stagger: {
+                    each: 0.1,
+                    grid: [4, Math.ceil(toolItems.length / 4)],
+                    from: "edges", 
+                },
+                scrollTrigger: {
+                    trigger: ".tools-list",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                },
+            }
+        );
+        
 
     });
     </script>

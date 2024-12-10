@@ -1,6 +1,90 @@
 {% extends "templates/layouts/layout.html" %}
 
 {% block content %}
+<style>
 
+a.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  background: linear-gradient(to right, #4f46e5, #818cf8);
+}
+
+.button__wrapper {
+  position: relatife;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  background: #0a0a0a;
+}
+
+a.button:hover .button__text {
+  color: #ffffff;
+}
+
+.button__text {
+  position: relative;
+  z-index: 2;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  transition: 300ms ease;
+}
+
+.button__spotlight {
+  position: absolute;
+  z-index: 1;
+  height: 10px;
+  width: 10px;
+  opacity: 1;
+  border-radius: 10px;
+  background: linear-gradient(to right, #4f46e5, #818cf8);
+  inset: 0;
+  top: 50%;
+  transform: scale(0);
+}
+</style>
+
+<div>
+    <a href="#" class="button">
+        <span class="button__spotlight"></span>
+        <span class="button__wrapper">
+          <span class="button__text">
+            Bonjour
+          </span>
+        </span>
+      </a>
+</div>
+<script>
+    const button = document.querySelector('a.button');
+
+    button.addEventListener('mousemove', function(evt) {
+    const movX = evt.clientX - this.getBoundingClientRect().x;
+    gsap.to(".button__spotlight", {
+        x: movX,
+        scale: 30,
+        duration: 0.3
+    })
+    })
+
+    button.addEventListener('mouseleave', function(evt) {
+    const movX = evt.clientX - this.getBoundingClientRect().x;
+    gsap.to(".button__spotlight", {
+        x: movX,
+        scale: 0,
+        duration: 0.3
+    })
+    })
+
+</script>
 
 {% endblock %}

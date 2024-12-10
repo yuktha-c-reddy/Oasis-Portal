@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-    const sections = document.querySelectorAll(".section");
+    // const sections = document.querySelectorAll(".section");
 
-    sections.forEach((section) => {
-        gsap.fromTo(
-          section,
-          {
-            opacity: 0.9,
-            y: 0, 
-            scale: 1,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            ease: 'power2.out',
-            duration: 0.6, 
-            scrollTrigger: {
-              trigger: section,
-              start: 'top 100%', 
-              end: 'top 20%',
-              scrub: true,
-              toggleActions: 'play none none none',
-            }
-          }
-        );
-    });
+    // sections.forEach((section) => {
+    //     gsap.fromTo(
+    //       section,
+    //       {
+    //         opacity: 0.9,
+    //         y: 0, 
+    //         scale: 1,
+    //       },
+    //       {
+    //         opacity: 1,
+    //         y: 0,
+    //         scale: 1,
+    //         ease: 'power2.out',
+    //         duration: 0.6, 
+    //         scrollTrigger: {
+    //           trigger: section,
+    //           start: 'top 100%', 
+    //           end: 'top 20%',
+    //           scrub: true,
+    //           toggleActions: 'play none none none',
+    //         }
+    //       }
+    //     );
+    // });
 
     // const toolItems = document.querySelectorAll('.tool-item');
 

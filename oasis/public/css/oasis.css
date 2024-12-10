@@ -7,38 +7,14 @@ body{
     background-color: #f8f7ef;
     display: flex;
     flex-direction: column;
-    margin: 0px auto;
+    margin: 0px auto !important;
     -webkit-overflow-scrolling: touch;
 }
 .section {
     will-change: transform, opacity;
     transition: all 0.3s ease;
   }
-.join:hover{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%), #F5E253;;
-    border:  1px solid rgba(14, 18, 27, 0.24), 0px 0px 0px 1px #F5E253;;
-}
-.join{
-    width: 82px; 
-    font-weight: 700; 
-    height: 46px; 
-    border: 0.5px solid rgba(0, 0, 0, 0.16); 
-    border-radius: 8px; 
-    background-color: #F5E253;
-    cursor: pointer;
-}
-.forum-btn:hover{
-    background: #efeee3;
-    border: none;
-}
-.forum-btn{
-    width: 148px; 
-    font-weight: 700; 
-    height: 46px; 
-    border: 0.5px solid rgba(0, 0, 0, 0.16); 
-    border-radius: 8px; 
-    background-color: #f8f7ef;
-}
+
 .menu-icon{
     display: none;
 }

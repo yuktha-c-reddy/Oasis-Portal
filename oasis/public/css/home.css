@@ -243,9 +243,12 @@ img {
         font-size: 14px !important;
         line-height: 19px !important;
     }
+    .case-study-section{
+        min-height: 0px !important;
+    }
     .casestudy-component{
         background-color: #f8f7ef !important;
-        padding: 16px 16px !important;
+        padding: 16px 0px !important;
     }
     .casestudy-lrg-scrn-main{
         display: none !important;
@@ -257,6 +260,9 @@ img {
     .casestudy-header{
         font-size: 20px !important;
         line-height: 23px !important;
+    }
+    .casestudy-top-container{
+        padding: 0px 16px !important;
     }
     .casestudy-sub{
         font-size: 14px !important;
