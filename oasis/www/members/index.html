@@ -2,89 +2,124 @@
 
 {% block content %}
 <style>
-
-a.button {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
-  background: linear-gradient(to right, #4f46e5, #818cf8);
-}
-
-.button__wrapper {
-  position: relatife;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 45px;
-  border-radius: 10px;
-  background: #0a0a0a;
-}
-
-a.button:hover .button__text {
-  color: #ffffff;
-}
-
-.button__text {
-  position: relative;
-  z-index: 2;
-  font-family: sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: #ffffff;
-  transition: 300ms ease;
-}
-
-.button__spotlight {
-  position: absolute;
-  z-index: 1;
-  height: 10px;
-  width: 10px;
-  opacity: 1;
-  border-radius: 10px;
-  background: linear-gradient(to right, #4f46e5, #818cf8);
-  inset: 0;
-  top: 50%;
-  transform: scale(0);
-}
+  /* members */
+  ::-webkit-scrollbar {
+      display: none; 
+  }
+  .founder-members{
+        width: 100%;
+        height: calc(100vh - 100px);
+        padding: 128px 146px;
+        margin-bottom: 64px;
+        background-color: #FF94B8;
+        background-image: url('/assets/oasis/images/casestudy_vector.svg');
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+    }
+    .founder-top-container{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .founder-heading{
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+    }
+    .founder-description{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+    }
+    .founders{
+        display: flex;
+        overflow-x: scroll; 
+        padding-left: 146px; 
+        padding-right: 146px; 
+        margin: 0 -146px; 
+        scroll-padding-left: 146px; 
+        -webkit-overflow-scrolling: touch; 
+        -ms-overflow-style: none; 
+        scrollbar-width: none; 
+        -webkit-scrollbar-width: none;
+        gap: 34px;
+    }
+    .founder-card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 48px 24px;
+        gap: 73px;
+        min-width: 366px;
+        min-height: 306px;
+        background: #FFFFFF;
+    }
+    .founder-logo{
+        max-height: 30px;
+    }
+    .founder-info{
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+    .founder-name{
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    .founder-text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #000000;
+    }
+    .founder-cta{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #000000;
+    }
 </style>
-
-<div>
-    <a href="#" class="button">
-        <span class="button__spotlight"></span>
-        <span class="button__wrapper">
-          <span class="button__text">
-            Bonjour
-          </span>
-        </span>
-      </a>
-</div>
-<script>
-    const button = document.querySelector('a.button');
-
-    button.addEventListener('mousemove', function(evt) {
-    const movX = evt.clientX - this.getBoundingClientRect().x;
-    gsap.to(".button__spotlight", {
-        x: movX,
-        scale: 30,
-        duration: 0.3
-    })
-    })
-
-    button.addEventListener('mouseleave', function(evt) {
-    const movX = evt.clientX - this.getBoundingClientRect().x;
-    gsap.to(".button__spotlight", {
-        x: movX,
-        scale: 0,
-        duration: 0.3
-    })
-    })
-
-</script>
+<section>
+  <div class="founder-members">
+      <div class="founder-top-container">
+          <p class="founder-heading">Founding members</p>
+          <p class="founder-description">Collaborative pioneers driving tech-enabled social change.</p>
+      </div>
+      <div class="founders">
+          {% for partner in partners %}
+          <div class="founder-card">
+              <div class="founder-logo">
+                  <img src="{{partner.logo}}" alt="">
+              </div>
+              <div class="founder-info">
+                  <p class="founder-name">{{partner.partner_name}}</p>
+                  <p class="founder-text">{{partner.description}}</p>
+                  <p class="founder-cta">KNOW MORE</p>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</section>
 
 {% endblock %}

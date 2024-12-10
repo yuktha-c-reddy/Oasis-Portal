@@ -27,7 +27,7 @@
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .participate-btn:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .sec-btn {
@@ -35,7 +35,7 @@
         color: #000;
     }
     .sec-btn:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
     img{
@@ -206,14 +206,19 @@
     </div>
 </section>
 <section class="section">
-    <div class="partners" style="width: 100%; height: auto; padding: 64px 146px; background-color: #f8f7ef; display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; align-items: center;">
-    {% for partner in partners %}
-        {% if partner.key_partner %}
-            <a href="{{ partner.url }}" target="_blank" > 
-                <img class="partner-logo" src="{{ partner.logo }}" alt="logo" > 
-            </a>
-        {% endif %}
-    {% endfor %}
+    <div class="partners" style="width: 100%; height: auto; padding: 64px 146px; background-color: #f8f7ef;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">OUR ALLIANCE</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; align-items: center;">
+        {% for partner in partners %}
+            {% if partner.key_partner %}
+                <a href="{{ partner.url }}" target="_blank" > 
+                    <img class="partner-logo" src="{{ partner.logo }}" alt="logo" > 
+                </a>
+            {% endif %}
+        {% endfor %}
+        </div>
     </div>
 </section>
 <section class="section">
