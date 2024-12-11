@@ -172,7 +172,7 @@
                         city: document.getElementById('city').value,
                         primary_contact: document.getElementById('primary_contact').value,
                         email: document.getElementById('email').value,
-                        mobile_no: document.getElementById('mobile_no').value,
+                        mobile_no: '+91 '+ document.getElementById('mobile_no').value.trim(),
                         website: document.getElementById('website').value,
                         foss_usage_rate: document.getElementById('foss_usage_rate').value,
                         expectations_oasis: document.getElementById('expectations_oasis').value,
@@ -181,8 +181,17 @@
                 },
                 callback: function(r) {
                     if (!r.exc) {
-                        frappe.msgprint('Name saved: ' + r.message);
+                        frappe.msgprint('Response saved');
                         document.getElementById('name').value = '';
+                        document.getElementById('category').value = '';
+                        document.getElementById('city').value = '';
+                        document.getElementById('primary_contact').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('mobile_no').value = '';
+                        document.getElementById('website').value = '';
+                        document.getElementById('foss_usage_rate').value = '';
+                        document.getElementById('expectations_oasis').valu = '';
+                        document.getElementById('org_mission_allignment').value = '';
                     } else {
                         frappe.msgprint('Error: ' + r.exc);
                     }

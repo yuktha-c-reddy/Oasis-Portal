@@ -1,0 +1,312 @@
+{% extends "templates/layouts/layout.html" %}
+
+{% block content %}
+<script src="/assets/oasis/js/scroll_animations.js?version=2.06"></script> 
+
+<style>
+  /* membership */
+    .membership-top-container{
+        padding: 129px 146px 64px 146px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .membership-heading{
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    .membership-description{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #000000;
+    }
+    .membership-qualification{
+        padding: 64px 146px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .qualification-heading{
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    .qualification-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .qualification-inner-container{
+        width: 49%;
+        height: auto;
+        padding: 24px 0px 32px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: start;
+    }
+    .qualification-title{
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    .qualification-desc{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #000000;
+        opacity: 0.7;
+        max-width: 90%;
+    }
+    .border-top{
+        border-top: 1px solid rgba(0, 0, 0, 0.16);
+    }
+    .why-join-section{
+        padding: 64px 146px;
+        display: flex;
+        align-items: start;
+    }
+    .why-join-heading{
+        width: 371px;
+        display: flex;
+        justify-content: start;
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    .why-join-content{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .why-join-card{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 32px;
+    }
+    .why-join-title{
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    .why-join-desc{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #000000;
+        opacity: 0.7;
+    }
+    .how-to-join-section{
+       margin: 0px 146px;
+       padding: 64px;
+       background-color: rgba(245, 226, 83, 1);
+       display: flex;
+       flex-direction: column;
+       gap: 24px;
+       position: relative;
+    }
+    .how-to-join-heading{
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 124%;
+        letter-spacing: -0.04em;
+        color: #000000;
+    }
+    .how-to-join-desc{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #000000;
+        opacity: 0.7;
+    }
+    .how-to-join-points{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 124%;
+        letter-spacing: -0.02em;
+        color: #000000;
+        opacity: 0.7;
+    }
+    .how-to-join-list{
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    .how-to-join-cta{
+        font-family: 'Nanum Pen Script', cursive;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 136%;
+        letter-spacing: -0.01em;
+        color: #000000;
+        z-index: 999;
+    }
+    .how-to-join-cta-btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 16px;
+        gap: 10px;
+        background: #000000;
+        border-radius: 8px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 158%;
+        letter-spacing: -0.01em;
+        color: #FFFFFF;
+        z-index: 999;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .how-to-join-cta-btn:hover{
+        transform: scale(1.05);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .how-to-join-vector{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+    @media screen and (max-width: 768px) {
+        .membership-top-container{
+            padding: 64px 16px 32px 16px;
+        }
+        .membership-heading{
+            font-size: 36px;
+            line-height: 44px;
+        }
+        .membership-qualification{
+            padding: 32px 0px;
+            gap: 16px;
+        }
+        .qualification-inner-container{
+            width: 100%;
+            padding: 24px 16px 32px 16px;
+        }
+        .qualification-heading{
+            padding: 0px 16px;
+        }
+        .why-join-section{
+            padding: 32px 16px;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .why-join-heading{
+            width: 100%;
+        }
+        .how-to-join-section{
+            margin: 0px 16px 32px 16px;
+            padding: 32px 16px;
+            background-color: #FFFFFF;
+        }
+        .how-to-join-vector{
+            display: none;
+        }
+        .border-xs-top{
+            border-top: 0.5px solid rgba(0, 0, 0, 0.16);
+        }
+    }
+</style>
+<section>
+  <div class="membership-main">
+      <div class="membership-top-container fade-in">
+          <p class="membership-heading">Membership</p>
+          <p class="membership-description">Joining OASIS means becoming part of a vibrant network committed to leveraging Free and Open-Source Software (FOSS) for social impact. Whether you’re an individual, organization, or institution, membership offers an opportunity to contribute, collaborate, and grow.</p>
+      </div>
+      <div class="membership-qualification fade-in">
+        <div>
+            <p class="qualification-heading">Who Can Join?</p>
+        </div>
+        <div class="qualification-container">
+            <div class="qualification-inner-container">
+                <p class="qualification-title">FOSS Technologists & Innovators</p>
+                <p class="qualification-desc">Individuals and organizations developing or implementing FOSS solutions tailored for the social sector.</p>
+            </div>
+            <div class="qualification-inner-container border-xs-top">
+                <p class="qualification-title">Technology Providers & Vendors</p>
+                <p class="qualification-desc">Companies offering FOSS-based services, tools, and consultation.</p>
+            </div>
+            <div class="qualification-inner-container border-top">
+                <p class="qualification-title">Philanthropic Institutions</p>
+                <p class="qualification-desc">Organizations looking to build tech capacity among their beneficiaries.</p>
+            </div>
+            <div class="qualification-inner-container border-top">
+                <p class="qualification-title">Social Sector Organizations</p>
+                <p class="qualification-desc">NGOs, nonprofits, and other citizen sector entities eager to adopt FOSS for transformative impact.</p>
+            </div>
+        </div>
+      </div>
+      <div class="why-join-section fade-in">
+        <div class="why-join-heading">
+            <p>Why Join OASIS?</p>
+        </div>
+        <div class="why-join-content">
+            {% for item in whyjoin %}
+            <div class="why-join-card">
+                <p class="why-join-title">{{item.title}}</p>
+                <p class="why-join-desc">{{item.desc}}</p>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+      <div class="how-to-join-section fade-in">
+        <p class="how-to-join-heading">How to Join</p>
+        <p class="how-to-join-desc">Ready to make a difference with FOSS? Join OASIS today and become part of a growing alliance driving technological innovation for social good.</p>
+        <div>
+            <p class="how-to-join-points">Membership Criteria</p>
+            <ul class="how-to-join-desc how-to-join-list">
+                <li>A demonstrated commitment to FOSS-centric activities.</li>
+                <li>Active participation in OASIS events, workshops, and initiatives.</li>
+                <li>Adherence to OASIS’s guiding principles and framework.</li>
+            </ul>
+        </div>
+        <p class="how-to-join-cta">Ready to make a difference? Join us today!</p>
+        <a href="/join-oasis" style="text-decoration: none;"><button class="how-to-join-cta-btn">Join now</button></a>
+        <div class="how-to-join-vector"><img src="/assets/oasis/images/vector2.svg" alt=""></div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -11,7 +11,8 @@
   "solution",
   "category_tag",
   "solution_partner",
-  "tools_used"
+  "tools_used",
+  "subtitle"
  ],
  "fields": [
   {
@@ -54,11 +55,16 @@
    "fieldtype": "Table MultiSelect",
    "label": "Tools Used",
    "options": "tools used"
+  },
+  {
+   "fieldname": "subtitle",
+   "fieldtype": "Small Text",
+   "label": "Subtitle"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-25 16:31:36.369122",
+ "modified": "2024-12-10 18:09:14.659755",
  "modified_by": "Administrator",
  "module": "Oasis",
  "name": "case studies",

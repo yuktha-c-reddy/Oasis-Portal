@@ -187,7 +187,7 @@
                 <div style="position: absolute; top: 0px; right: 0px;">
                     <img fill="#fe4537" src="/assets/oasis/images/shape3.svg" alt="">
                 </div>
-                <div>
+                <div style="display: flex; flex-direction: column; gap: 24px;">
                     <div>
                         <p class="right-bottom-p" style="font-family: Bricolage Grotesque, sans-serif; margin: 0px; font-size: 24px; font-weight: 600; line-height: 30px; color: #ffffff;">
                             FOSS (Free and & Open-Source Software) enables access to libre, low-cost, and sustainable solutions and promotes transparency and collaboration.
@@ -275,7 +275,7 @@
                         {% for item in casestudies %}
                         <div id="casestudy-container" data-casestudy-name="{{ item.name }}" style="cursor: pointer; width: auto; flex:1; color: #ffffff; height: 96px; padding: 24px 32px; display: flex; flex-direction: column; gap: 4px;">
                             <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px;">{{item.title}}</p>
-                            <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px;">cupabangalore.org</p>
+                            <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px;">{{item.subtitle | default('', true)}}</p>
                         </div>
                         {% endfor %}
                     </div>

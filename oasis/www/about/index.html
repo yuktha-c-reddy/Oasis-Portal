@@ -1,6 +1,8 @@
 {% extends "templates/layouts/layout.html" %}
 
 {% block content %}
+<script src="/assets/oasis/js/scroll_animations.js?version=2.06"></script> 
+
 <style>
     ::-webkit-scrollbar {
         display: none; 
@@ -37,7 +39,6 @@
         line-height: 136%;
         letter-spacing: -0.01em;
         color: #000000;
-        max-width: 90%;
     }
     .about-mission-heading{
         font-family: 'Bricolage Grotesque';
@@ -154,6 +155,7 @@
         line-height: 136%;
         letter-spacing: -0.01em;
         color: #000000;
+        cursor: pointer;
     }
     /* organisation */
     .organisation-container{
@@ -271,6 +273,11 @@
         letter-spacing: -0.01em;
         color: #FFFFFF;
         width: 219px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .organisation-cta-btn:hover{
+        transform: scale(1.05);
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
     .board-members{
         flex: 1;
@@ -386,11 +393,11 @@
 
 <section>
     <div class="about-main-container">
-        <div class="about-main-content">
+        <div class="about-main-content fade-in">
             <p class="about-heading">About OASIS</p>
             <p class="about-description">By adopting FOSS, organisations in the social sector can leverage powerful tools, reduce costs, and contribute to a collaborative ecosystem of technological innovation.</p>
         </div>
-        <div class="about-mission">
+        <div class="about-mission fade-in">
             <div>
                 <p class="about-mission-heading">Mission</p>
             </div>
@@ -409,12 +416,12 @@
     </div>
 </section>
 <section>
-    <div class="founder-members">
+    <div class="founder-members fade-in">
         <div class="founder-top-container">
             <p class="founder-heading">Founding members</p>
             <p class="founder-description">Collaborative pioneers driving tech-enabled social change.</p>
         </div>
-        <div class="founders">
+        <div class="founders fade-in">
             {% for partner in partners %}
             <div class="founder-card">
                 <div class="founder-logo">
@@ -431,12 +438,12 @@
     </div>
 </section>
 <section>
-    <div class="organisation-container">
-        <div class="organisation-header">
+    <div id="organisation" class="organisation-container">
+        <div class="organisation-header fade-in">
             <p class="organisation-heading">Organisation</p>
             <p class="organisation-description">OASIS is a growing alliance of a diverse set of organizations led by a governing council. </p>
         </div>
-        <div class="organisation-board-members">
+        <div class="organisation-board-members fade-in">
             <div class="organisation-left-container">
                 <p class="board-heading">Board</p>
                 <p class="board-description">The strategic direction of the alliance, its day to day activities and plans are directed by the board. The current board (formed in 2024) was constituted by the founding member organisations of OASIS. The framework for the constitution or reconstitution of the council, such as an election process, is still underway.</p>
@@ -453,7 +460,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="organisation-advisory-council">
+        <div class="organisation-advisory-council fade-in">
             <div class="organisation-left-container">
                 <p class="board-heading">Advisory Council</p>
                 <p class="board-description">The advisory council, constituted by the board, is a group of individuals with expertise in FOSS, technology, and social innovation, who advise the council and the alliance members.</p>
@@ -468,11 +475,11 @@
                 </div>
             </div>
         </div>
-        <div class="organisation-cta">
+        <div class="organisation-cta fade-in">
             <p class="organisation-cta-header">Join Our Movement</p>
             <p class="organisation-cta-description">Are you passionate about Free and Open Source Software (FOSS) or social innovation? Become a part of OASIS, where individuals and organizations collaborate to drive tech for good. Whether you're a technologist, a FOSS provider working in the social sector, or a philanthropic institution building tech capacity, there's a place for you in our alliance. Together, we can create meaningful change by leveraging technology for social impact.</p>
             <p class="organisation-cta-subtext">Ready to make a difference? Join us today!</p>
-            <button class="organisation-cta-btn">Learn about membership -></button>
+            <a href="/membership" style="text-decoration: none;"><button class="organisation-cta-btn">Learn about membership</button></a> 
         </div>
     </div>
 </section>

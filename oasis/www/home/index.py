@@ -82,11 +82,12 @@ def get_cached_casestudies():
         
     casestudies = frappe.db.sql("""
         SELECT 
-            cs.name, cs.title, cs.challenge, cs.solution, 
+            cs.name, cs.title, cs.challenge, cs.solution, cs.subtitle,
             cs.category_tag, p.logo as solution_partner
         FROM `tabcase studies` cs
         LEFT JOIN `tabpartners` p ON p.name = cs.solution_partner
-        ORDER BY cs.creation asc
+        ORDER BY cs.creation desc
+        LIMIT 4
     """, as_dict=True)
 
     case_names = [c.name for c in casestudies]
@@ -111,6 +112,7 @@ def get_cached_casestudies():
     casestudies = [{
         'name': cs.name,
         'title': cs.title,
+        'subtitle': cs.subtitle,
         'challenge': cs.challenge,
         'solution': cs.solution,
         'category_tag': cs.category_tag,
