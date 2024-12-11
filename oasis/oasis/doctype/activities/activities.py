@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class joinoasis(Document):
+class activities(Document):
 	pass

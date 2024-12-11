@@ -4,7 +4,7 @@ from frappe.model.document import Document
 @frappe.whitelist(allow_guest=True)
 def validate_form(data):
     data = frappe.parse_json(data)
-    form_submission = frappe.new_doc("join oasis")
+    form_submission = frappe.new_doc("Join Oasis Form")
 
     form_submission.name = data.get("name")
     form_submission.category = data.get("category")

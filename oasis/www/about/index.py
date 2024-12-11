@@ -17,7 +17,7 @@ def get_context(context):
             "name": "Poruri Sai Rahul", "title": "CEO, FOSS United", "profile": "/assets/oasis/images/image (5).png"
         },
         {
-            "name": "Shemeer Babu", "title": "Co-Founder, Aikyam Fellows", "profile": "/assets/oasis/images/image (6).png"
+            "name": "Shemeer Babu", "title": "Co-Founder, Aikyam Fellows", "profile": "/assets/oasis/images/image (6).jpeg"
         },
         {
             "name": "Vinay Kumar", "title": "Software Engineer, Zerodha", "profile": "/assets/oasis/images/image (7).png"
@@ -27,7 +27,7 @@ def get_context(context):
         }
     ]
 
-    context.partners = frappe.db.get_list('partners', 
+    context.partners = frappe.db.get_list('Partners', 
         filters={}, 
         fields=['partner_name', 'key_partner', 'logo', 'icon', 'url', 'description'],
         order_by='creation asc',

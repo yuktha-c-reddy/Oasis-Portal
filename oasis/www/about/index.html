@@ -156,6 +156,26 @@
         letter-spacing: -0.01em;
         color: #000000;
         cursor: pointer;
+        display: inline-block;        
+        position: relative;
+    }
+    .founder-cta::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1.5px; 
+        background-color: #000; 
+        transition: width 0.3s ease;
+    }
+
+    .founder-cta:hover {
+        color: #000000; 
+    }
+
+    .founder-cta:hover::after {
+        width: 100%;
     }
     /* organisation */
     .organisation-container{
@@ -416,8 +436,8 @@
     </div>
 </section>
 <section>
-    <div class="founder-members fade-in">
-        <div class="founder-top-container">
+    <div class="founder-members">
+        <div class="founder-top-container fade-in">
             <p class="founder-heading">Founding members</p>
             <p class="founder-description">Collaborative pioneers driving tech-enabled social change.</p>
         </div>
@@ -430,7 +450,7 @@
                 <div class="founder-info">
                     <p class="founder-name">{{partner.partner_name}}</p>
                     <p class="founder-text">{{partner.description}}</p>
-                    <p class="founder-cta">KNOW MORE</p>
+                    <a href="{{partner.url}}" target="_blank" style="text-decoration: none;"><p class="founder-cta">KNOW MORE</p></a>
                 </div>
             </div>
             {% endfor %}

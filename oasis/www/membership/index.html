@@ -5,6 +5,9 @@
 
 <style>
   /* membership */
+    .membership-main{
+        padding: 0px 0px 128px 0px;
+    }
     .membership-top-container{
         padding: 129px 146px 64px 146px;
         display: flex;
@@ -210,6 +213,9 @@
         right: 0px;
     }
     @media screen and (max-width: 768px) {
+        .membership-main{
+            padding: 0px;
+        }
         .membership-top-container{
             padding: 64px 16px 32px 16px;
         }
@@ -227,6 +233,9 @@
         }
         .qualification-heading{
             padding: 0px 16px;
+        }
+        .qualification-desc{
+            max-width: 100%;
         }
         .why-join-section{
             padding: 32px 16px;
@@ -278,13 +287,13 @@
             </div>
         </div>
       </div>
-      <div class="why-join-section fade-in">
-        <div class="why-join-heading">
+      <div class="why-join-section">
+        <div class="why-join-heading fade-in">
             <p>Why Join OASIS?</p>
         </div>
         <div class="why-join-content">
             {% for item in whyjoin %}
-            <div class="why-join-card">
+            <div class="why-join-card fade-in">
                 <p class="why-join-title">{{item.title}}</p>
                 <p class="why-join-desc">{{item.desc}}</p>
             </div>

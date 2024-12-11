@@ -2,6 +2,8 @@
 
 {% block content %}
 {% include "templates/web.html" %}
+<script src="/assets/oasis/js/scroll_animations.js?version=2.06"></script> 
+
 <style>
     *,
     *::before,
@@ -96,7 +98,7 @@
 </style>
 
 <section class="join-form" style="width: 100%; min-height: 100vh; padding: 24px 146px; display: flex; justify-content: center;">
-    <div class="form-inner-component" style="border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 32px; border-radius: 10px; max-width: 60%; background-color: #fff;">
+    <div class="form-inner-component fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 32px; border-radius: 10px; max-width: 60%; background-color: #fff;">
         <p style="font-family: Inter, sans-serif; font-weight: 600; color: rgba(0, 0, 0, 1); font-size: 30px; line-height: 39px;">Join OASIS</p>
         <P style="font-family: Inter, sans-serif; font-weight: 400; color: rgba(0, 0, 0, 1); font-size: 16px; line-height: 21px; margin: 8px 0px;">Be an oasis member</P>
         <hr style="margin: 25px 0px">
@@ -181,7 +183,7 @@
                 },
                 callback: function(r) {
                     if (!r.exc) {
-                        frappe.msgprint('Response saved');
+                        frappe.msgprint('Response Saved');
                         document.getElementById('name').value = '';
                         document.getElementById('category').value = '';
                         document.getElementById('city').value = '';

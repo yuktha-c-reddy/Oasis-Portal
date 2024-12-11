@@ -13,10 +13,17 @@ body{
 .section {
     will-change: transform, opacity;
     transition: all 0.3s ease;
-  }
+}
 
 .menu-icon{
     display: none;
+}
+#overlayNavbarMenu {
+    position: absolute;
+    top: 0;
+    right: -100%; 
+    width: 100%; /* Set the width of the overlay */
+    height: 100vh;
 }
 .overlayContent{
     position: fixed; 

@@ -5,7 +5,7 @@
 {% block content %}
 <link rel="preconnect" href="/assets/oasis/images">
 <link rel="dns-prefetch" href="/assets/oasis/images">
-<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.16">
+<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.19">
 <!-- <script src="/assets/oasis/js/scroll_animations.js?version=2.05"></script> -->
 
 <style>
@@ -151,6 +151,21 @@
             gap: 8px !important;
         }
     }
+    @media screen and (min-width: 1025px) and (max-width: 1479px) {
+        .main-container{
+            width: 100% !important;
+            padding: 0px !important;
+        }
+        .inner-container{
+            width: 100% !important;
+            padding: 0px !important;
+            justify-content: center !important;
+        }
+        .left-container {
+            height: 686px !important;
+            max-width: 803px !important;
+        }
+    }
 </style>
 
 <section class="section_1">
@@ -173,7 +188,7 @@
                         </p>
                     </div>
                     <div style="font-size: 14px; font-family: Inter, sans-serif; display: flex; gap: 24px;">
-                        <a href="/"><button class="participate-btn main-button" > Participate -></button></a>
+                        <a href="https://forum.oasishq.org/"><button class="participate-btn main-button" > Participate -></button></a>
                         <a href="/join-oasis"><button class="sec-btn main-button" > Join -></button></a>
                     </div>
                 </div>
@@ -273,7 +288,7 @@
                 <div class="case-study-right" style="display: flex; flex-direction: column; ">
                     <div style="display: flex; ">
                         {% for item in casestudies %}
-                        <div id="casestudy-container" data-casestudy-name="{{ item.name }}" style="cursor: pointer; width: auto; flex:1; color: #ffffff; height: 96px; padding: 24px 32px; display: flex; flex-direction: column; gap: 4px;">
+                        <div id="casestudy-container" data-casestudy-name="{{ item.name }}" style="cursor: pointer; transition: background-color 0.2s ease; width: auto; flex:1; color: #ffffff; height: 96px; padding: 24px 32px; display: flex; flex-direction: column; gap: 4px;">
                             <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px;">{{item.title}}</p>
                             <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px;">{{item.subtitle | default('', true)}}</p>
                         </div>
@@ -330,7 +345,7 @@
                 <div style="display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0px 16px;">
                     <div>
                         <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px; color: rgba(0, 0, 0, 0.86);">{{item.title}}</p>
-                        <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: rgba(0, 0, 0, 0.56);">cupabangalore.org</p>
+                        <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: rgba(0, 0, 0, 0.56);">{{item.subtitle | default('', true)}}</p>
                     </div>
                     <div>
                         <p style="padding: 4px 8px; border-radius: 40px; width: auto; display: inline-block; font-family: 'Inter', sans-serif; margin: 0px; font-size: 12px; font-weight: 500; line-height: 16px; color: rgba(0, 0, 0, 1); text-align: right; background-color: {{ colors[loop.index0 % colors|length] }};">{{item.category_tag}}</p>
@@ -348,9 +363,9 @@
             <div class="tools-lrg-scrn" style="border: 0.5px solid rgba(0, 0, 0, 0.16); display: flex; justify-content: center; flex-wrap: wrap;">
                 <div class="tools-list" style="flex-wrap: wrap; display: flex; width: 612px; height: 612px;">
                     {% for img in tools %}
-                    <div style=" flex: 0 0 25%; background-color: transparent; display: flex; justify-content: center; align-items: center; border-right: 0.5px solid rgba(0, 0, 0, 0.16); border-bottom: 0.5px solid rgba(0, 0, 0, 0.16); cursor: pointer;">
-                        <div class="tool-item" style=" width: 60%; height: 60%; display: flex; justify-content: center; align-items: center; perspective: 1000px; ">
-                            <img style="width: 45px; height: 45px; mix-blend-mode: darken;" src="{{img.logo}}" alt="">
+                    <div class="tool-container" style=" flex: 0 0 25%; background-color: transparent; display: flex; justify-content: center; align-items: center; border-right: 0.5px solid rgba(0, 0, 0, 0.16); border-bottom: 0.5px solid rgba(0, 0, 0, 0.16); cursor: pointer;">
+                        <div class="tool-item" style=" width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; perspective: 1000px; ">
+                            <img class="tool-img" style="width: 45px; height: 45px; mix-blend-mode: darken;" src="{{img.logo}}" alt="">
                         </div>
                     </div>
                     {% endfor %}
@@ -483,23 +498,23 @@
             // caseStudyContainers[0].classList.add('case-active');
 
             gsap.fromTo(caseStudyContainers[0], 
-                        {
-                            backgroundColor: 'transparent',
-                            color: '#ffffff',
-                            opacity: 0,
-                            scale: 1
-                        },
-                        {
-                            backgroundColor: 'rgba(255,255,255,1)', 
-                            color: '#000000',
-                            border: '0.5px solid rgba(0, 0, 0, 0.16)',
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.6,
-                            ease: "power2.out",
-                            stagger:2,
-                        }
-                    );
+                {
+                    backgroundColor: 'transparent',
+                    color: '#ffffff',
+                    opacity: 0,
+                    scale: 1
+                },
+                {
+                    backgroundColor: 'rgba(255,255,255,1)', 
+                    color: '#000000',
+                    border: '0.5px solid rgba(0, 0, 0, 0.16)',
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out",
+                    stagger:2,
+                }
+            );
         }
     
         document.querySelector('.case-study-right').addEventListener('click', (event) => {
@@ -554,7 +569,7 @@
                             border: '0.5px solid rgba(0, 0, 0, 0.16)',
                             opacity: 1,
                             scale: 1,
-                            duration: 1.2,
+                            duration: 0.3,
                             ease: "power2.out",
                             stagger: 0.2,
                         }
@@ -659,8 +674,57 @@
                 },
             }
         );
-        
 
+        document.querySelectorAll('.tool-container').forEach(container => {
+            const toolImg = container.querySelector('.tool-img');
+            const toolItem = container.querySelector('.tool-item');
+
+            container.addEventListener('mouseenter', () => {
+                gsap.to(toolImg, {
+                    scale: 1.2, 
+                    duration: 0.3,
+                    ease: "power1.out",
+                });
+                gsap.to(toolItem, {
+                    rotateY: 180, 
+                    duration: 0.4,
+                    backgroundColor: "#ffffff",
+                    ease: "power1.out",
+                });
+                // gsap.to(toolImg, {
+                //     rotation: 3, 
+                //     yoyo: true, 
+                //     repeat: -1, 
+                //     duration: 0.2,
+                //     ease: "sine.inOut", 
+                // });
+            });
+
+            container.addEventListener('mouseleave', () => {
+                gsap.to(toolImg, {
+                    scale: 1, 
+                    duration: 0.3,
+                    ease: "power1.out",
+                    clearProps: "scale", 
+                });
+
+                gsap.to(toolItem, {
+                    rotateY: 0, 
+                    duration: 0.4,
+                    backgroundColor: "#f8f7ef",
+                    ease: "power1.out",
+                });
+
+                // gsap.to(toolImg, {
+                //     rotation: 0, 
+                //     yoyo: false,
+                //     duration: 0.3,
+                //     repeat: 0,
+                //     ease: "power1.out",
+                //     clearProps: "rotation", 
+                // });
+            });
+        });
     });
     </script>
 

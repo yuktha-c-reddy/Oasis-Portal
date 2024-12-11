@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class cards(Document):
+class JoinOasisForm(Document):
 	pass

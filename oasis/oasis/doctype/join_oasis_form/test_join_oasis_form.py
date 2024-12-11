@@ -12,18 +12,18 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class Testjoinoasis(UnitTestCase):
+class TestJoinOasisForm(UnitTestCase):
 	"""
-	Unit tests for joinoasis.
+	Unit tests for JoinOasisForm.
 	Use this class for testing individual functions and methods.
 	"""
 
 	pass
 
 
-class Testjoinoasis(IntegrationTestCase):
+class TestJoinOasisForm(IntegrationTestCase):
 	"""
-	Integration tests for joinoasis.
+	Integration tests for JoinOasisForm.
 	Use this class for testing interactions between multiple components.
 	"""
 

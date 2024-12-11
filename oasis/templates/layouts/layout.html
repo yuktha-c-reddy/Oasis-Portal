@@ -35,7 +35,10 @@
           border: 0.5px solid rgba(0, 0, 0, 0.16);
           border-radius: 8px;
         }
-        
+        img {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
         .nav-items a {
           color: #000;
           text-decoration: none;
@@ -157,31 +160,31 @@
                     </div>
                 </div>
                 <div style="padding: 32px 16px;">
-                    <a href="/about" style="text-decoration: none; color: inherit;">
+                    <a href="/about" class="nav-menu-item" style="text-decoration: none; color: inherit;">
                         <div style="padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer;">
                             <p style="margin: 0px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; padding: 12px 10px; line-height: 22px; text-transform: uppercase;">About</p>
                         </div>
                     </a>
                     <hr style="height: 1px; margin: 0px 12px;">
-                    <a href="/membership" style="text-decoration: none; color: inherit;">
+                    <a href="/membership" class="nav-menu-item" style="text-decoration: none; color: inherit;">
                         <div style="padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer;">
                             <p style="margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;">Membership</p>
                         </div>
                     </a>
                     <hr style="height: 1px; margin: 0px 12px;">
-                    <a href="/about#organisation" style="text-decoration: none; color: inherit;">
+                    <a href="/about#organisation" class="nav-menu-item" style="text-decoration: none; color: inherit;">
                         <div style="padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer; ">
                         <p style="margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;">Board</p>
                         </div>
                     </a>
                     <hr style="height: 1px; margin: 0px 12px;">
-                    <a href="/activities" style="text-decoration: none; color: inherit;">
+                    <a href="/activities" class="nav-menu-item" style="text-decoration: none; color: inherit;">
                         <div style="padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer; ">
                             <p style="margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;">Activities</p>
                         </div>
                     </a>
                     <hr style="height: 1px; margin: 0px 12px;">
-                    <a href="/join-oasis" style="text-decoration: none; color: inherit;">
+                    <a href="/join-oasis" class="nav-menu-item" style="text-decoration: none; color: inherit;">
                         <div style="padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer; ">
                             <p style="margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;">Join Us</p>
                         </div>
@@ -205,6 +208,44 @@
     </footer>
 
     <script>
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const menuToggle = document.getElementById('toggleNavbarMenu');
+        //     const overlayNavbarMenu = document.getElementById('overlayNavbarMenu');
+        //     const overlayContent = document.querySelector('.overlayContent');
+        //     const closeMenu = document.getElementById('closeNavbarMenu');
+        //     const navItems = document.querySelectorAll('.nav-menu-item');  // Assuming your nav items have this class
+
+
+        //     // Function to show the overlay with slide-in effect
+        //     function showMenu() {
+        //         overlayContent.classList.add('show'); // Show the overlay content
+        //         gsap.to(overlayContent, {
+        //             duration: 0.5,
+        //             right: '0%', // Slide it in
+        //             ease: 'power2.out'
+        //         });
+        //     }
+
+        //     // Function to hide the overlay with slide-out effect
+        //     function hideMenu() {
+        //         gsap.to(overlayContent, {
+        //             duration: 0.5,
+        //             right: '-100%', // Slide it out
+        //             ease: 'power2.in',
+        //             onComplete: function () {
+        //                 overlayContent.classList.remove('show'); // Hide the overlay content after animation completes
+        //             }
+        //         });
+        //     }
+
+        //     // Event listeners for toggling the menu
+        //     menuToggle.addEventListener('click', showMenu);
+        //     closeMenu.addEventListener('click', hideMenu);
+        // });
+
+
+
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('toggleNavbarMenu');
             const overlayMenu = document.getElementById('overlayNavbarMenu').querySelector('.overlayContent');
@@ -216,6 +257,7 @@
 
             menuToggle.addEventListener('click', toggleMenu);
             closeMenu.addEventListener('click', toggleMenu);
+
         });
     </script>
 </body>
