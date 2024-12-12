@@ -2,14 +2,12 @@
     will-change: transform, opacity;
     transition: all 0.3s ease;
   }
-  
-p{
+p {
     margin: 0;
 }
 ::-webkit-scrollbar {
     display: none; 
 }
-
 .tools-left-header{
     font-family: 'Bricolage Grotesque';
     font-style: normal;
@@ -95,7 +93,6 @@ p{
     color: #000000;
     max-width: 340px;
 }
-
 .main-container{
     width: 100%;
     padding: 0px 146px;

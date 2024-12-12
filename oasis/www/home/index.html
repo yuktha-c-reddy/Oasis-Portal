@@ -9,6 +9,35 @@
 <!-- <script src="/assets/oasis/js/scroll_animations.js?version=2.05"></script> -->
 
 <style>
+    .inner-container{
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        gap: 20px;
+    }
+    .left-container{
+        width: 813px; 
+        height: 686px; 
+        background-color: white; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        padding: 64px; display: flex; 
+        flex-direction: column; 
+        gap: 64px;
+    }
+    .sect1-header{
+        font-family: Bricolage Grotesque, sans-serif; 
+        font-size: 36px; 
+        font-weight: 600; 
+        line-height: 44px; 
+        max-width: 373px;
+    }
+    .sect1-sub{
+        font-family: Inter, sans-serif; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 16px; 
+        line-height: 21px;
+    }
     .main-button {
         width: auto;
         padding: 12px 16px ;
@@ -40,6 +69,89 @@
     }
     img{
         mix-blend-mode: darken;
+    }
+    .right-container{
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column; 
+        gap: 20px;
+    }
+    .right-top{
+        width: 345px;
+    }
+    .right-bottom{
+        width: 345px; 
+        height: 408px; 
+        padding: 36px 24px; 
+        display: flex; 
+        justify-content: end; 
+        flex-direction: column; 
+        gap: 24px; 
+        background-color: #FF6459; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        position: relative;
+    }
+    .right-bottom-p{
+        font-family: Bricolage Grotesque, sans-serif; 
+        margin: 0px; 
+        font-size: 24px; 
+        font-weight: 600; 
+        line-height: 30px; 
+        color: #ffffff;
+    }
+    /* partners */
+    .partners{
+        width: 100%; 
+        height: auto; 
+        padding: 64px 146px; 
+        background-color: #f8f7ef;
+    }
+    .partners-heading{
+        font-family: 'Nanum Pen Script', cursive; 
+        margin: 0px; 
+        font-size: 22px; 
+        font-weight: 400; 
+        line-height: 30px; 
+        color: rgba(0, 0, 0, 1);
+    }
+    /* activities */
+    .cards{
+        background-image: url('/assets/oasis/images/bgvector-min.svg'); 
+        background-color: #f8f7ef; 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        width: 100%; 
+        padding: 128px 146px; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 18px;
+    }
+    .inner-card1{
+        width: 442px; 
+        flex-basis: 442px; 
+        flex-grow: 0; 
+        flex-shrink: 0; 
+        height: 619px; 
+        padding: 64px 32px; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: flex-end; 
+        gap: 10px; 
+        background-color: #ffffff;
+    }
+    .inner-cards{
+        width: 442px; 
+        height: 619px; 
+        flex-basis: 442px; 
+        flex-grow: 0; 
+        flex-shrink: 0; 
+        padding: 64px 32px; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-between; 
+        gap: 10px;
+        position: relative;
     }
     .tools-sml-scrn{
         display: none !important;
@@ -170,20 +282,20 @@
 
 <section class="section_1">
     <div class="main-container">
-       <div class="inner-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+       <div class="inner-container">
         <div class="left-outer-container fade-in">
-            <div class="left-container" style="width: 813px; height: 686px; background-color: white; border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 64px; display: flex; flex-direction: column; gap: 64px;">
+            <div class="left-container">
                 <div>
                     <img class="home-banner1" src="/assets/oasis/images/banner1.svg" type="image/svg+xml" alt="">
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 24px;">
                     <div>
-                        <p class="sect1-header" style="font-family: Bricolage Grotesque, sans-serif; font-size: 36px; font-weight: 600; line-height: 44px; max-width: 373px;">
+                        <p class="sect1-header">
                             Empowering change through open source
                         </p>
                     </div>
                     <div>
-                        <p class="sect1-sub" style="font-family: Inter, sans-serif; font-weight: 400; color: rgba(0, 0, 0, 1); font-size: 16px; line-height: 21px;">
+                        <p class="sect1-sub">
                             We are a network of organizations united by the vision that Free and Open-Source Software (FOSS) can empower citizen sector organizations and communities to create positive impact at scale.
                         </p>
                     </div>
@@ -194,17 +306,17 @@
                 </div>
             </div>
         </div>
-        <div class="right-container fade-in" style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px;">
-            <div class="right-top" style="width: 345px;">
+        <div class="right-container fade-in">
+            <div class="right-top">
                 <img src="/assets/oasis/images/banner2.svg" alt="">
             </div>
-            <div class="right-bottom" style="width: 345px; height: 408px; padding: 36px 24px; display: flex; justify-content: end; flex-direction: column; gap: 24px; background-color: #FF6459; border: 0.5px solid rgba(0, 0, 0, 0.16); position: relative;">
+            <div class="right-bottom">
                 <div style="position: absolute; top: 0px; right: 0px;">
                     <img fill="#fe4537" src="/assets/oasis/images/shape3.svg" alt="">
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 24px;">
                     <div>
-                        <p class="right-bottom-p" style="font-family: Bricolage Grotesque, sans-serif; margin: 0px; font-size: 24px; font-weight: 600; line-height: 30px; color: #ffffff;">
+                        <p class="right-bottom-p">
                             FOSS (Free and & Open-Source Software) enables access to libre, low-cost, and sustainable solutions and promotes transparency and collaboration.
                         </p>
                     </div>
@@ -221,9 +333,9 @@
     </div>
 </section>
 <section class="section">
-    <div class="partners" style="width: 100%; height: auto; padding: 64px 146px; background-color: #f8f7ef;">
+    <div class="partners">
         <div style="display: flex; justify-content: center; align-items: center;">
-            <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">OUR ALLIANCE</p>
+            <p class="partners-heading">OUR ALLIANCE</p>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; align-items: center;">
         {% for partner in partners %}
@@ -238,18 +350,18 @@
 </section>
 <section class="section">
     <div style="width: 100%;">
-        <div class="cards" style="background-image: url('/assets/oasis/images/bgvector-min.svg'); background-color: #f8f7ef; background-repeat: no-repeat; background-size: cover; width: 100%; padding: 128px 146px; display: flex; flex-direction: column; gap: 18px;">
+        <div class="cards">
             <div class="card-heading fade-in">
                 <p>How we achieve it?</p>
             </div>
             <div class="card-row fade-in">
-                <div class="inner-card1 card-panel" style="width: 442px; flex-basis: 442px; flex-grow: 0; flex-shrink: 0; height: 619px; padding: 64px 32px; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; background-color: #ffffff; ">
+                <div class="inner-card1 card-panel">
                     <p style="font-family: 'Bricolage Grotesque', sans-serif; margin: 0px; font-size: 48px; font-weight: 600; line-height: 55px; color: #000000; max-width: 242px;">
                         How we achieve it?
                     </p>
                 </div>
                 {% for card in cards %}
-                <div class="inner-cards card-panel" style="width: 442px; height: 619px; flex-basis: 442px; flex-grow: 0; flex-shrink: 0; padding: 64px 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; background-color: {{ card.background_color }}; position: relative;">
+                <div class="inner-cards card-panel" style="background-color: {{ card.background_color }}">
                     <div>
                         <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 24px; font-weight: 500; line-height: 30px; color: #000000;">
                             {{ card.content_summary }}
