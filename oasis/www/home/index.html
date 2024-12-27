@@ -5,280 +5,8 @@
 {% block content %}
 <link rel="preconnect" href="/assets/oasis/images">
 <link rel="dns-prefetch" href="/assets/oasis/images">
-<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.19">
-<!-- <script src="/assets/oasis/js/scroll_animations.js?version=2.05"></script> -->
-
-<style>
-    .inner-container{
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: space-between; 
-        gap: 20px;
-    }
-    .left-container{
-        width: 813px; 
-        height: 686px; 
-        background-color: white; 
-        border: 0.5px solid rgba(0, 0, 0, 0.16); 
-        padding: 64px; display: flex; 
-        flex-direction: column; 
-        gap: 64px;
-    }
-    .sect1-header{
-        font-family: Bricolage Grotesque, sans-serif; 
-        font-size: 36px; 
-        font-weight: 600; 
-        line-height: 44px; 
-        max-width: 373px;
-    }
-    .sect1-sub{
-        font-family: Inter, sans-serif; 
-        font-weight: 400; 
-        color: rgba(0, 0, 0, 1); 
-        font-size: 16px; 
-        line-height: 21px;
-    }
-    .main-button {
-        width: auto;
-        padding: 12px 16px ;
-        font-weight: 700;
-        border-radius: 8px;
-        border: 0.5px solid rgba(0, 0, 0, 0.16);
-        font-family: 'Inter', sans-serif;
-        cursor: pointer;
-        overflow: visible;
-        text-decoration: none;
-        transition: all 400ms ease-in-out;
-    }
-    .participate-btn {
-        background-color: #000;
-        color: #ffffff;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .participate-btn:hover {
-        transform: scale(1.05);
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    .sec-btn {
-        background-color: #f8f7ef;
-        color: #000;
-    }
-    .sec-btn:hover {
-        transform: scale(1.05);
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    img{
-        mix-blend-mode: darken;
-    }
-    .right-container{
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        flex-direction: column; 
-        gap: 20px;
-    }
-    .right-top{
-        width: 345px;
-    }
-    .right-bottom{
-        width: 345px; 
-        height: 408px; 
-        padding: 36px 24px; 
-        display: flex; 
-        justify-content: end; 
-        flex-direction: column; 
-        gap: 24px; 
-        background-color: #FF6459; 
-        border: 0.5px solid rgba(0, 0, 0, 0.16); 
-        position: relative;
-    }
-    .right-bottom-p{
-        font-family: Bricolage Grotesque, sans-serif; 
-        margin: 0px; 
-        font-size: 24px; 
-        font-weight: 600; 
-        line-height: 30px; 
-        color: #ffffff;
-    }
-    /* partners */
-    .partners{
-        width: 100%; 
-        height: auto; 
-        padding: 64px 146px; 
-        background-color: #f8f7ef;
-    }
-    .partners-heading{
-        font-family: 'Nanum Pen Script', cursive; 
-        margin: 0px; 
-        font-size: 22px; 
-        font-weight: 400; 
-        line-height: 30px; 
-        color: rgba(0, 0, 0, 1);
-    }
-    /* activities */
-    .cards{
-        background-image: url('/assets/oasis/images/bgvector-min.svg'); 
-        background-color: #f8f7ef; 
-        background-repeat: no-repeat; 
-        background-size: cover; 
-        width: 100%; 
-        padding: 128px 146px; 
-        display: flex; 
-        flex-direction: column; 
-        gap: 18px;
-    }
-    .inner-card1{
-        width: 442px; 
-        flex-basis: 442px; 
-        flex-grow: 0; 
-        flex-shrink: 0; 
-        height: 619px; 
-        padding: 64px 32px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: flex-end; 
-        gap: 10px; 
-        background-color: #ffffff;
-    }
-    .inner-cards{
-        width: 442px; 
-        height: 619px; 
-        flex-basis: 442px; 
-        flex-grow: 0; 
-        flex-shrink: 0; 
-        padding: 64px 32px; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: space-between; 
-        gap: 10px;
-        position: relative;
-    }
-    .tools-sml-scrn{
-        display: none !important;
-        mix-blend-mode: darken;
-    }
-    .casestudy-top-container{
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-    }
-    .case-active{
-        background-color: #ffffff;
-        color: #000000 !important;
-        border: 0.5px solid rgba(0, 0, 0, 0.16); 
-     }
-    .case-inactive{
-        color: #ffffff;
-        border: 0.5px solid transparent; 
-    }
-    .case-study-btn{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 12px 16px;
-        gap: 10px;
-        background: #FFFFFF;
-        border-radius: 8px;
-        border: none;
-        outline: none;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 158%;
-        letter-spacing: -0.01em;
-        color: #3CB645;
-    }
-    .tool-item{
-        background-color: #f8f7ef;
-    }
-    .tool-item img{
-        mix-blend-mode: darken;
-    }
-    @media screen and (max-width: 768px) {
-        .casestudy-header{
-            color: black !important;
-        }
-        .casestudy-sub{
-            color: black !important;
-        }
-        .case-study-btn{
-            display: none !important;
-        }
-        .tools{
-            padding: 24px 0px !important;
-            background-color: white !important;
-            margin: 0px !important;
-            height: 519px !important;
-        }
-        .tools-lrg-scrn{
-            display: none !important;
-        }
-        .tools-sml-scrn{
-            display: block !important;
-            background-color: white !important;
-            height: auto !important;
-            width: 100% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 12px !important;
-        }
-        .tools-btn-left{
-            flex: 1 !important;
-            padding: 12px 6px !important;
-        }
-        .tools-btn-right{
-            background-color: #f8f7ef !important;
-            border-radius: 8px !important;
-            padding: 12px 6px !important;
-            flex:1 !important;
-        }
-        .benefits{
-            border: 0.5px solid rgba(0, 0, 0, 0.16) !important;
-            padding: 32px 16px 32px 16px !important;
-            gap: 32px !important;
-            margin: 32px 16px !important;
-        }
-        .benefits-cards{
-            border: none !important;
-            padding: 0px 0px!important;
-            gap: 32px !important;
-        }
-        .benefits-inner-cards{
-            border: none !important;
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 32px !important;
-        }
-        .benefit-card{
-            display: flex !important;
-            flex-direction: row !important;
-        }
-        .benefit-card img{
-            width: 24px !important;
-            height: 24px !important;
-        }
-        .card-content{
-            gap: 8px !important;
-        }
-    }
-    @media screen and (min-width: 1025px) and (max-width: 1479px) {
-        .main-container{
-            width: 100% !important;
-            padding: 0px !important;
-        }
-        .inner-container{
-            width: 100% !important;
-            padding: 0px !important;
-            justify-content: center !important;
-        }
-        .left-container {
-            height: 686px !important;
-            max-width: 803px !important;
-        }
-    }
-</style>
+<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.24">
+<script src="/assets/oasis/js/scroll_animations.js?version=2.0"></script>
 
 <section class="section_1">
     <div class="main-container">
@@ -322,9 +50,11 @@
                     </div>
                     <hr style="height: 1px; width: 100%; background-color: #fe4537; border: none;">
                     <div>
-                        <p style="font-size: 16px; font-family: Inter, sans-serif; margin: 0px; font-weight: 500; line-height: 25px; color: #ffffff; text-decoration: underline 1px; text-underline-offset: 3px; cursor: pointer;">
-                            Read about FOSS & Social Sector ->
-                        </p>
+                        <a href="/foss">
+                            <p style="font-size: 16px; font-family: Inter, sans-serif; margin: 0px; font-weight: 500; line-height: 25px; color: #ffffff; text-decoration: underline 1px; text-underline-offset: 3px; cursor: pointer;">
+                                Read about FOSS & Social Sector ->
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -369,10 +99,10 @@
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 10px; z-index: 999;">
                         <div>
-                            <button class="card-btn" style="background-color: #ffffff; padding: 12px 16px; border-radius: 40px; border: none; width: auto; font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 700; line-height: 20px; text-transform: uppercase;">{{ card.cta_button_1_label }} -></button>
+                            <button class="card-btn">{{ card.cta_button_1_label }} -></button>
                         </div>
                         <div>
-                            <button class="card-btn" style="background-color: #ffffff; padding: 12px 16px; border-radius: 40px; border: none; width: auto; font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 700; line-height: 20px; text-transform: uppercase;">{{ card.cta_button_2_label }} -></button>
+                            <button class="card-btn">{{ card.cta_button_2_label }} -></button>
                         </div>
                     </div>
                     <div style="position: absolute; bottom: 0px; right: 0px;">
@@ -384,30 +114,30 @@
         </div>
     </div>
 </section>
-<section class="section case-study-section" style="width: 100%; min-height: 100vh;">
-    <div class="casestudy-component" style="width: 100%; padding: 128px 146px; background-color: #3CB645; background-image: url('/assets/oasis/images/casestudy_vector.svg');">
-        <div class="casestudy-innercomponent" style="display: flex; flex-direction: column; gap: 64px;">
+<section class="section case-study-section">
+    <div class="casestudy-component">
+        <div class="casestudy-innercomponent">
             <div class="casestudy-top-container">
                 <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <p class="casestudy-header" style="font-family: 'Bricolage Grotesque', sans-serif; margin: 0px; font-size: 32px; font-weight: 600; line-height: 37px; color: #ffffff;">Here are a few impact stories. </p>
-                    <p class="casestudy-sub" style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: #ffffff;">We helped these organizations to adapt FOSS and become more impactful.</p>
+                    <p class="casestudy-header">Here are a few impact stories. </p>
+                    <p class="casestudy-sub">We helped these organizations to adapt FOSS and become more impactful.</p>
                 </div>
                 <div>
                     <button class="case-study-btn">View all case studies</button>
                 </div>
             </div>
-            <div class="casestudy-lrg-scrn-main" style="display: flex; width: 100%; flex-direction: column; contain: layout; will-change: contents;">
-                <div class="case-study-right" style="display: flex; flex-direction: column; ">
+            <div class="casestudy-lrg-scrn-main">
+                <div class="case-study-right">
                     <div style="display: flex; ">
                         {% for item in casestudies %}
-                        <div id="casestudy-container" data-casestudy-name="{{ item.name }}" style="cursor: pointer; transition: background-color 0.2s ease; width: auto; flex:1; color: #ffffff; height: 96px; padding: 24px 32px; display: flex; flex-direction: column; gap: 4px;">
-                            <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px;">{{item.title}}</p>
-                            <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px;">{{item.subtitle | default('', true)}}</p>
+                        <div id="casestudy-container" class="casestudy-inner-container" data-casestudy-name="{{ item.name }}" >
+                            <p class="casestudy-container-title" style="font-weight: 600;">{{item.title}}</p>
+                            <p class="casestudy-container-title" style="font-weight: 400;">{{item.subtitle | default('', true)}}</p>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
-                <div class="case-study-left transition-all duration-700 fade-in-out" style="display: flex; flex: 1; gap: 23px; padding: 42px 42px 98px 42px; background-color: #ffffff;">
+                <div class="case-study-left transition-all duration-700 fade-in-out">
                     <div style="display: flex; flex: 1; flex-direction: column; gap: 23px;">
                         <div class="fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); width: auto; padding: 32px; display: flex; flex-direction: column; gap: 20px;">
                             <div>
@@ -451,16 +181,16 @@
                     </div>
                 </div>
             </div>
-            <div class="casetudy-sml-scrn-main" style="width: 100%; height:auto; display: none; padding: 16px 0px;">
+            <div class="casetudy-sml-scrn-main">
                 {% set colors = ['#FF94B8', '#F5E253', '#85B4EF', '#3CB645'] %}
                 {% for item in casestudies %}
                 <div style="display: flex; justify-content: space-between; align-items: center; height: 80px; padding: 0px 16px;">
                     <div>
-                        <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 600; line-height: 21px; color: rgba(0, 0, 0, 0.86);">{{item.title}}</p>
-                        <p style="font-family: 'Inter', sans-serif; margin: 0px; font-size: 16px; font-weight: 400; line-height: 21px; color: rgba(0, 0, 0, 0.56);">{{item.subtitle | default('', true)}}</p>
+                        <p class="casestudy-container-title" style="font-weight: 600; color: rgba(0, 0, 0, 0.86);">{{item.title}}</p>
+                        <p class="casestudy-container-title" style="font-weight: 400; color: rgba(0, 0, 0, 0.56);">{{item.subtitle | default('', true)}}</p>
                     </div>
                     <div>
-                        <p style="padding: 4px 8px; border-radius: 40px; width: auto; display: inline-block; font-family: 'Inter', sans-serif; margin: 0px; font-size: 12px; font-weight: 500; line-height: 16px; color: rgba(0, 0, 0, 1); text-align: right; background-color: {{ colors[loop.index0 % colors|length] }};">{{item.category_tag}}</p>
+                        <p class="category-text-xs" style="background-color: {{ colors[loop.index0 % colors|length] }}">{{item.category_tag}}</p>
                     </div>
                 </div>
                 <hr style="width: 100%; height: 1px;">
@@ -470,14 +200,14 @@
     </div>
 </section> 
 <section class="section">
-    <div class="tools" style="width: 100%; padding: 128px 146px;">
-        <div class="tools-main-div" style="display: flex; justify-content: center; flex-wrap: wrap;">
-            <div class="tools-lrg-scrn" style="border: 0.5px solid rgba(0, 0, 0, 0.16); display: flex; justify-content: center; flex-wrap: wrap;">
-                <div class="tools-list" style="flex-wrap: wrap; display: flex; width: 612px; height: 612px;">
+    <div class="tools">
+        <div class="tools-main-div">
+            <div class="tools-lrg-scrn">
+                <div class="tools-list">
                     {% for img in tools %}
-                    <div class="tool-container" style=" flex: 0 0 25%; background-color: transparent; display: flex; justify-content: center; align-items: center; border-right: 0.5px solid rgba(0, 0, 0, 0.16); border-bottom: 0.5px solid rgba(0, 0, 0, 0.16); cursor: pointer;">
-                        <div class="tool-item" style=" width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; perspective: 1000px; ">
-                            <img class="tool-img" style="width: 45px; height: 45px; mix-blend-mode: darken;" src="{{img.logo}}" alt="">
+                    <div class="tool-container">
+                        <div class="tool-item">
+                            <img class="tool-img" src="{{img.logo}}" alt="">
                         </div>
                     </div>
                     {% endfor %}
@@ -526,65 +256,65 @@
     </div>
 </section>
 <section class="section" style="width: 100%;">
-    <div class="benefits" style="padding: 0px 146px 128px 146px; display: flex; flex-direction: column; gap: 64px;">
+    <div class="benefits">
         <div class="fade-in" style="display: flex; flex-direction: column; gap: 12px;">
             <p class="benefits-header">Benefits of FOSS</p>
             <p class="benefits-sub">By adopting FOSS, organisations in the social sector can leverage powerful tools, reduce costs, and contribute to a collaborative ecosystem of technological innovation.</p>
         </div>
-        <div class="benefits-inner-cards fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16);">
-            <div class="benefits-cards" style="display: flex; justify-content: center; gap: 24px; border-bottom: 0.5px solid rgba(0, 0, 0, 0.16); padding: 40px;">
-                <div class="benefit-card" style="width: 340px; display: flex; flex-direction: column; gap: 24px;">
+        <div class="benefits-inner-cards fade-in">
+            <div class="benefits-cards" style="border-bottom: 0.5px solid rgba(0, 0, 0, 0.16);">
+                <div class="benefit-card">
                     <div>
                         <img style="width: 36px; height: 36px;" src="/assets/oasis/images/Icon.svg" alt="">
                     </div>
-                    <div class="card-content" style="display: flex; flex-direction: column; gap: 24px;">
+                    <div class="card-content">
                         <p class="benefits-card-title">Cost-Effective</p>
                         <p class="benefits-card-sub">Reduces software expenses, especially beneficial for non-profits and small organisations.</p>
                     </div>
                 </div>
-                <div class="benefit-card" style="width: 340px; display: flex; flex-direction: column; gap: 24px;">
+                <div class="benefit-card">
                     <div>
                         <img style="width: 36px; height: 36px;" src="/assets/oasis/images/Icon (1).svg" alt="">
                     </div>
-                    <div class="card-content" style="display: flex; flex-direction: column; gap: 24px;">
+                    <div class="card-content">
                         <p class="benefits-card-title">Customizable</p>
                         <p class="benefits-card-sub">Can be tailored to specific organisational needs.</p>
                     </div>
                 </div>
-                <div class="benefit-card" style="width: 340px; display: flex; flex-direction: column; gap: 24px;">
+                <div class="benefit-card">
                     <div>
                         <img style="width: 36px; height: 36px;" src="/assets/oasis/images/Icon (2).svg" alt="">
                     </div>
-                    <div class="card-content" style="display: flex; flex-direction: column; gap: 24px;">
+                    <div class="card-content">
                         <p class="benefits-card-title">Transparent</p>
                         <p class="benefits-card-sub">Open code means better security and privacy control.</p>
                     </div>
                 </div>
             </div>
-            <div class="benefits-cards" style="display: flex; justify-content: center; gap: 24px; padding: 40px;">
-                <div class="benefit-card" style="width: 340px; display: flex; flex-direction: column; gap: 24px;">
+            <div class="benefits-cards">
+                <div class="benefit-card">
                     <div>
                         <img style="width: 36px; height: 36px;" src="/assets/oasis/images/Icon (3).svg" alt="">
                     </div>
-                    <div class="card-content" style="display: flex; flex-direction: column; gap: 24px;">
+                    <div class="card-content">
                         <p class="benefits-card-title">Community-Driven</p>
                         <p class="benefits-card-sub">Benefits from continuous improvements by a global community of developers.</p>
                     </div>
                 </div>
-                <div class="benefit-card" style="width: 340px; display: flex; flex-direction: column; gap: 24px;">
+                <div class="benefit-card">
                     <div>
                         <img style="width: 36px; height: 36px;" src="/assets/oasis/images/Icon (5).svg" alt="">
                     </div>
-                    <div class="card-content" style="display: flex; flex-direction: column; gap: 24px;">
+                    <div class="card-content">
                         <p class="benefits-card-title">Promotes Innovation</p>
                         <p class="benefits-card-sub">Encourages collaborative problem-solving and knowledge sharing.</p>
                     </div>
                 </div>
-                <div class="benefit-card" style="width: 340px; display: flex; flex-direction: column; gap: 24px;">
+                <div class="benefit-card">
                     <div>
                         <img style="width: 36px; height: 36px;" src="/assets/oasis/images/Icon (6).svg" alt="">
                     </div>
-                    <div class="card-content" style="display: flex; flex-direction: column; gap: 24px;">
+                    <div class="card-content">
                         <p class="benefits-card-title">Open Source</p>
                         <p class="benefits-card-sub">The source code is openly available, allowing users to study how the software works.</p>
                     </div>
@@ -667,7 +397,6 @@
                     // });
                     caseStudyContainers.forEach(container => {
                         if (container === currentTarget) {
-                    // Explicit fade-in for active container
                     gsap.fromTo(container, 
                         {
                             backgroundColor: 'transparent',
@@ -687,7 +416,6 @@
                         }
                     );
                 } else {
-                    // Fade out for inactive containers
                     gsap.to(container, {
                         backgroundColor: 'transparent',
                         color: '#ffffff',
@@ -724,20 +452,20 @@
             duration: 25, 
         });
 
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.utils.toArray(".fade-in").forEach((section) => {
-            gsap.from(section, {
-                opacity: 0,
-                y: 50, 
-                duration: 0.8,
-                ease: "power2.out",
-                scrollTrigger: {
-                trigger: section,
-                start: "top 80%", 
-                toggleActions: "play none none reverse", 
-                },
-            });
-        });
+        // gsap.registerPlugin(ScrollTrigger);
+        // gsap.utils.toArray(".fade-in").forEach((section) => {
+        //     gsap.from(section, {
+        //         opacity: 0,
+        //         y: 50, 
+        //         duration: 0.8,
+        //         ease: "power2.out",
+        //         scrollTrigger: {
+        //         trigger: section,
+        //         start: "top 80%", 
+        //         toggleActions: "play none none reverse", 
+        //         },
+        //     });
+        // });
 
         gsap.fromTo(
             ".partner-logo", 
@@ -803,13 +531,6 @@
                     backgroundColor: "#ffffff",
                     ease: "power1.out",
                 });
-                // gsap.to(toolImg, {
-                //     rotation: 3, 
-                //     yoyo: true, 
-                //     repeat: -1, 
-                //     duration: 0.2,
-                //     ease: "sine.inOut", 
-                // });
             });
 
             container.addEventListener('mouseleave', () => {
@@ -826,15 +547,6 @@
                     backgroundColor: "#f8f7ef",
                     ease: "power1.out",
                 });
-
-                // gsap.to(toolImg, {
-                //     rotation: 0, 
-                //     yoyo: false,
-                //     duration: 0.3,
-                //     repeat: 0,
-                //     ease: "power1.out",
-                //     clearProps: "rotation", 
-                // });
             });
         });
     });

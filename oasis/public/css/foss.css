@@ -1,0 +1,300 @@
+.foss-main-container{
+    width: 100%;
+    padding: 0px 146px;
+}
+.foss-main-content{
+    padding: 129px 0px 64px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.foss-heading{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.foss-description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+.foss-key-principle{
+    padding: 64px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.foss-key-principle-heading{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.key-priciple-cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+}
+.key-priciple-card{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 20px;
+    flex: 1 1 calc(50% - 30px);
+    background: #FFFFFF;
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+}
+.key-principle-card-heading{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.key-principle-card-description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+    opacity: 0.7;
+}
+.benefits{
+    padding: 64px 146px 128px 146px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 64px;
+}
+.benefits-inner-cards{
+    border: 0.5px solid rgba(0, 0, 0, 0.16);
+}
+.benefits-cards{
+    display: flex; 
+    justify-content: center; 
+    gap: 24px;  
+    padding: 40px;
+}
+.benefit-card{
+    width: 340px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 24px;
+}
+.card-content{
+    display: flex; 
+    flex-direction: column; 
+    gap: 24px;
+}
+.benefits-header{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 116%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.benefits-sub{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    max-width: 828px;
+}
+.benefits-card-title{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.benefits-card-sub{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+    max-width: 340px;
+}
+.foss-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 64px;
+    gap: 24px;
+    background: #FF94B8;
+    position: relative;
+    overflow: hidden;
+}
+.banner-svg{
+    position: absolute;
+    bottom: -134px;
+    right: 0px;
+}
+.banner-section{
+    padding: 0px 146px 146px 146px;
+}
+.banner-heading{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.banner-subtext{
+    font-family: 'Nanum Pen Script', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+.banner-cta-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    background: #000000;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 158%;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.banner-cta-btn:hover{
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+    .foss-main-container{
+        padding: 0px 16px;
+    }
+    .foss-main-content{
+        padding: 64px 0px 32px 0px;
+    }
+    .foss-heading{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .foss-description{
+        max-width: 100%;
+        font-size: 20px;
+    }
+    .foss-key-principle{
+        padding: 32px 0px;
+        gap: 32px;
+    }
+    .foss-key-principle-heading{
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .key-priciple-cards{
+        gap: 28px;
+    }
+    .key-priciple-card{
+        width: 100%;
+        flex-direction: column;
+        padding: 32px 16px;
+        flex: 1 1 100%;
+        gap: 12px;
+    }
+    .key-principle-card-heading{
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .key-principle-card-description{
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .benefits-header{
+        font-size: 20px !important;
+        line-height: 23px !important;
+    }
+    .benefits-sub{
+        font-size: 14px !important;
+        line-height: 19px !important;
+    }
+    .benefits{
+        border: 0.5px solid rgba(0, 0, 0, 0.16) !important;
+        padding: 32px 16px 32px 16px !important;
+        gap: 32px !important;
+        margin: 32px 16px !important;
+    }
+    .benefits-cards{
+        flex-wrap: wrap;
+        border: none !important;
+        padding: 0px 0px!important;
+        gap: 32px !important;
+    }
+    .benefit-card{
+        gap: 14px !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    .benefits-card-title{
+        font-size: 16px !important;
+        line-height: 20px !important;
+    }
+    .benefits-card-sub{
+        font-size: 14px !important;
+        line-height: 19px !important;
+        color: rgba(0, 0, 0, 0.72) !important;
+    }
+    .benefits-inner-cards{
+        border: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 32px !important;
+    }
+    .benefit-card img{
+        width: 24px !important;
+        height: 24px !important;
+    }
+    .card-content{
+        gap: 8px !important;
+    }
+    .banner-section{
+        padding: 0px 16px 32px 16px;
+    }
+    .foss-banner{
+        padding: 64px 16px;
+    }
+    .banner-heading{
+        font-size: 32px !important;
+        line-height: 37px !important;
+    }
+}

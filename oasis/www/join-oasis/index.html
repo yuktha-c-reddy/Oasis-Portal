@@ -8,9 +8,8 @@
     *,
     *::before,
     *::after {
-    box-sizing: border-box;
+        box-sizing: border-box;
     }
-
     :root {
         --select-border: #777;
         --select-focus: blue;
@@ -90,6 +89,14 @@
     @media screen and (max-width: 768px) {
         .join-form{
             padding: 20px !important;
+        }
+        .form-inner-component{
+            max-width: 100% !important;
+        }
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .join-form{
+            padding: 56px !important;
         }
         .form-inner-component{
             max-width: 100% !important;
