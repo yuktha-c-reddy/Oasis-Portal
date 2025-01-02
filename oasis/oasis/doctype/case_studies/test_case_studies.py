@@ -12,18 +12,18 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class Testcasestudies(UnitTestCase):
+class TestCaseStudies(UnitTestCase):
 	"""
-	Unit tests for casestudies.
+	Unit tests for CaseStudies.
 	Use this class for testing individual functions and methods.
 	"""
 
 	pass
 
 
-class Testcasestudies(IntegrationTestCase):
+class TestCaseStudies(IntegrationTestCase):
 	"""
-	Integration tests for casestudies.
+	Integration tests for CaseStudies.
 	Use this class for testing interactions between multiple components.
 	"""
 

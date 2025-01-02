@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class toolsused(Document):
+class ToolsUsed(Document):
 	pass

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class activities(Document):
+class Activities(Document):
 	pass

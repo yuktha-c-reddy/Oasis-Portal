@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class casestudytools(Document):
+class CaseStudyTools(Document):
 	pass
