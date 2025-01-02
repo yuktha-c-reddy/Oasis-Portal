@@ -47,14 +47,14 @@
    "fieldname": "solution_partner",
    "fieldtype": "Link",
    "label": "Solution Partner",
-   "options": "partners",
+   "options": "Partners",
    "reqd": 1
   },
   {
    "fieldname": "tools_used",
    "fieldtype": "Table MultiSelect",
    "label": "Tools Used",
-   "options": "tools used"
+   "options": "Tools Used"
   },
   {
    "fieldname": "subtitle",
