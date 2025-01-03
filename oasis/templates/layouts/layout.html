@@ -21,113 +21,12 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="/assets/oasis/css/oasis.css?version=1.14">
+    <link rel="stylesheet" href="/assets/oasis/css/oasis.css?version=1.16">
     <title>{% block title %}{{ title | string }}{% endblock %}</title>
-    <style>
-        .nav-items {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          font-family: 'Inter', sans-serif;
-          font-size: 14px;
-          font-weight: 700;
-          border: 0.5px solid rgba(0, 0, 0, 0.16);
-          border-radius: 8px;
-        }
-        img {
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-        }
-        .nav-items a {
-          color: #000;
-          text-decoration: none;
-          position: relative;
-          margin: 12px 15px;
-          cursor: pointer;
-        }
-        
-        .nav-items a::after {
-          content: '';
-          position: absolute;
-          bottom: 0; 
-          left: 0;   
-          width: 0; 
-          height: 2px; 
-          background-color: rgba(0, 0, 0, 0.56);
-          transition: width 0.4s ease;
-        }
-        
-        .nav-items a:hover::after {
-          width: 100%; 
-        }
-
-        .join {
-            width: 82px;
-            height: 46px;
-            font-weight: 700;
-            border: 0.5px solid rgba(0, 0, 0, 0.16);
-            border-radius: 8px;
-            background-color: #F5E253; 
-            cursor: pointer;
-            color: black;
-            transition: background-color 0.4s ease-in-out; 
-            }
-
-        .join:hover {
-            background-color: #fcf12f; 
-            box-shadow: 0 0 1px 1px rgba(255, 247, 106, 0.6); 
-         }
-        .forum-btn {
-            width: 148px;
-            height: 46px;
-            font-weight: 700;
-            border: 0.5px solid rgba(0, 0, 0, 0.16);
-            border-radius: 8px;
-            background-color: #f8f7ef;
-            color: #000;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: background-color 0.5s ease;
-        }
-
-        .forum-btn:hover {
-            background: #f8f7ef;
-        }
-
-        .forum-btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 8px;
-            border: 1px solid black;
-            clip-path: polygon(
-                0% 100%,
-                0% 100%,
-                0% 100%,
-                0% 100%
-            );
-            transition: clip-path 0.5s ease-in-out;
-        }
-
-        .forum-btn:hover::before {
-            clip-path: polygon(
-                0% 100%, 
-                0% 0%,   
-                100% 0%,
-                100% 100% 
-            );
-        }
-        .forum-btn::before {
-            transition: clip-path 0.3s ease-in-out;
-        }
-        </style>
-        
         
 </head>
 <body style="min-height: 100vh;" class="antialiased">
-    <nav style="background-color: #f8f7ef; width: 100%; min-height: 100px; display: flex; align-items: center;">
+    <nav style="background-color: #f8f7ef; width: 100%; min-height: 100px; margin: 0px auto; display: flex; align-items: center;">
         <div class="nav-menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0px 146px;">
             <div class="nav-items" style="display: flex; align-items: center; justify-content: center; gap: 10px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 700; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px;">
                 <a style="color: #000; text-decoration: none;" href="/about"><p style="margin: 0px; cursor: pointer; ">About</p></a>
@@ -208,44 +107,6 @@
     </footer>
 
     <script>
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     const menuToggle = document.getElementById('toggleNavbarMenu');
-        //     const overlayNavbarMenu = document.getElementById('overlayNavbarMenu');
-        //     const overlayContent = document.querySelector('.overlayContent');
-        //     const closeMenu = document.getElementById('closeNavbarMenu');
-        //     const navItems = document.querySelectorAll('.nav-menu-item');  // Assuming your nav items have this class
-
-
-        //     // Function to show the overlay with slide-in effect
-        //     function showMenu() {
-        //         overlayContent.classList.add('show'); // Show the overlay content
-        //         gsap.to(overlayContent, {
-        //             duration: 0.5,
-        //             right: '0%', // Slide it in
-        //             ease: 'power2.out'
-        //         });
-        //     }
-
-        //     // Function to hide the overlay with slide-out effect
-        //     function hideMenu() {
-        //         gsap.to(overlayContent, {
-        //             duration: 0.5,
-        //             right: '-100%', // Slide it out
-        //             ease: 'power2.in',
-        //             onComplete: function () {
-        //                 overlayContent.classList.remove('show'); // Hide the overlay content after animation completes
-        //             }
-        //         });
-        //     }
-
-        //     // Event listeners for toggling the menu
-        //     menuToggle.addEventListener('click', showMenu);
-        //     closeMenu.addEventListener('click', hideMenu);
-        // });
-
-
-
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('toggleNavbarMenu');
             const overlayMenu = document.getElementById('overlayNavbarMenu').querySelector('.overlayContent');

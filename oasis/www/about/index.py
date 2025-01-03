@@ -24,6 +24,9 @@ def get_context(context):
         },
         {
             "name": "Vishnu Sudhakaran", "title": "Software Engineer, Zerodha", "profile": "/assets/oasis/images/image (8).png"
+        },
+        {
+            "name": "Irina Snissar Lobo", "title": "System Change Practicioner, Curator &Writer", "profile": "/assets/oasis/images/image (9).png"
         }
     ]
 

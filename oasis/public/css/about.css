@@ -103,7 +103,8 @@
 .founders{
     display: flex;
     flex-wrap: wrap; 
-    gap: 34px;
+    row-gap: 34px;
+    column-gap: 34px;
 }
 .founder-card{
     display: flex;
@@ -111,7 +112,7 @@
     align-items: flex-start;
     padding: 48px 24px;
     gap: 73px;
-    max-width: 366px;
+    max-width: 31%;
     min-height: 306px;
     background: #FFFFFF;
 }
@@ -401,5 +402,22 @@
     .organisation-cta-description{
         font-size: 16px;
         line-height: 21px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .about-main-container{
+        padding: 0px 56px;
+    }
+    .founder-members{
+        padding: 56px;
+    }
+    .organisation-container{
+        padding: 56px;
+    }  
+}  
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+    .founders{
+        row-gap: 2.0vh;
+        column-gap: 1.7%;
     }
 }

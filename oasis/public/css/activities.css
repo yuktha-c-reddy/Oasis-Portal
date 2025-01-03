@@ -66,6 +66,11 @@
     font-weight: 700; 
     line-height: 20px; 
     text-transform: uppercase;
+    transition: all 0.25s ease-out;
+}
+.activity-cta:hover{
+    transform: scale(1.05); 
+    box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
 }
 .activity-cta-buttons{
     display: flex;

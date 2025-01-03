@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ease: "power2.out",
             scrollTrigger: {
             trigger: section,
-            start: "top 80%", 
+            start: "top 100%", 
             toggleActions: "play none none reverse", 
             },
         });

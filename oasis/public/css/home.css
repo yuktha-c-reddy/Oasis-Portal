@@ -11,6 +11,7 @@ p {
 .main-container{
     width: 100%;
     padding: 0px 146px;
+    margin: 0px auto;
 }
 .inner-container{
     display: flex; 
@@ -83,6 +84,11 @@ img{
 }
 .right-top{
     width: 345px;
+    height: 255px;
+}
+.right-top img{
+    width: 100%;
+    object-fit: cover;
 }
 .right-bottom{
     width: 345px; 
@@ -172,6 +178,11 @@ img{
     font-weight: 700; 
     line-height: 20px; 
     text-transform: uppercase;
+    transition: all 0.25s ease-out;
+}
+.card-btn:hover {
+    transform: scale(1.05); 
+    box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
 }
 .cards-container {
     contain: layout;
@@ -221,6 +232,7 @@ img{
     display: flex; 
     flex-direction: column; 
     gap: 64px;
+    margin: 0px auto;
 }
 .casestudy-top-container{
     display: flex;
@@ -327,6 +339,11 @@ img{
     line-height: 158%;
     letter-spacing: -0.01em;
     color: #3CB645;
+    transition: all 0.25s ease-out;
+}
+.case-study-btn:hover{
+    transform: scale(1.05); 
+    box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
 }
 /* tools */
 .tools{
@@ -343,6 +360,13 @@ img{
     display: flex; 
     justify-content: center; 
     flex-wrap: wrap;
+}
+.tools-content{
+    width: 565px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0px 20px;
 }
 .tools-list{
     flex-wrap: wrap; 
@@ -406,19 +430,37 @@ img{
     font-weight: 700;
     color: white;
     border: none;
+    transition: all 0.25s ease-out;
+}
+.tools-btn-left:hover{
+    transform: scale(1.05); 
+    box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
 }
 .tools-btn-right{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 158%;
     color: #000000;
     border: none;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.tools-btn-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 11px;
+    width: 0;
+    height: 1.5px; 
+    background-color: #000; 
+    transition: width 0.3s ease;
+}
+.tools-btn-right:hover::after {
+    width: 100%;
 }
 .tools-sml-scrn{
     display: none !important;
@@ -436,6 +478,7 @@ img{
     display: flex; 
     flex-direction: column; 
     gap: 64px;
+    margin: 0px auto;
 }
 .benefits-inner-cards{
     border: 0.5px solid rgba(0, 0, 0, 0.16);
@@ -447,7 +490,7 @@ img{
     padding: 40px;
 }
 .benefit-card{
-    width: 340px; 
+    width: 33%; 
     display: flex; 
     flex-direction: column; 
     gap: 24px;
@@ -773,6 +816,7 @@ img{
         gap: 34px !important;
     }
 }
+
 @media screen and (min-width: 1025px) and (max-width: 1479px) {
     .main-container{
         width: 100% !important;
@@ -787,7 +831,59 @@ img{
         height: 686px !important;
         max-width: 803px !important;
     }
+    .tools-content{
+        width: 45%;
+        padding: 24px;
+    }
+    .tools-list{
+        width: 55%;
+    }
+    
 }
+@media screen and (min-width: 1490px){
+    .inner-container{
+        gap: 1.7%;
+    }
+    .left-outer-container{
+        width: 69.01%;
+        height: 76.22vh;
+    }
+    .left-container{
+        width: 100%;
+        height: 76.22vh;
+        justify-content: center;
+    }
+    .right-container{
+        width:  29.29%;
+        gap: 2.22vh;
+    }
+    .right-top{
+        width: 100%;
+        height: 28.33vh;
+    }
+    .right-top img{
+        width: 100%;
+        height: 28.33vh;
+        object-fit: cover;
+    }
+    .right-bottom{
+        width: 100%;
+        height: 45.33vh;
+    }
+
+
+    .tools-main-div{
+        width: 100%;
+    }
+    .tools-content{
+        width: 45%;
+        padding: 64px;
+    }
+    .tools-list{
+        width: 55%;
+    }
+}
+
 /* @media screen and (min-width: 1025px) and (max-width: 1439px) {
     .main-container{
         width: 100% !important;

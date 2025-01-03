@@ -5,8 +5,8 @@
 {% block content %}
 <link rel="preconnect" href="/assets/oasis/images">
 <link rel="dns-prefetch" href="/assets/oasis/images">
-<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.24">
-<script src="/assets/oasis/js/scroll_animations.js?version=2.0"></script>
+<link rel="stylesheet" href="/assets/oasis/css/home.css?version=2.61">
+<script src="/assets/oasis/js/scroll_animations.js?version=2.01"></script>
 
 <section class="section_1">
     <div class="main-container">
@@ -99,7 +99,7 @@
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 10px; z-index: 999;">
                         <div>
-                            <button class="card-btn">{{ card.cta_button_1_label }} -></button>
+                            <button class="card-btn btn-2">{{ card.cta_button_1_label }} -></button>
                         </div>
                         <div>
                             <button class="card-btn">{{ card.cta_button_2_label }} -></button>
@@ -174,7 +174,7 @@
                             <p style="font-family: 'Nanum Pen Script', cursive; margin: 0px; font-size: 22px; font-weight: 400; line-height: 30px; color: rgba(0, 0, 0, 1);">Tool used</p>
                             <div id="tool-list" style="display: flex; gap: 24px;">
                                 {% for item in casestudies[0].tools_used %}
-                                    <img src="{{item.logo}}" alt="">
+                                    <img style="width: 50px; height: 50px;" src="{{item.logo}}" alt="">
                                 {% endfor %}
                             </div>
                         </div>
@@ -212,8 +212,8 @@
                     </div>
                     {% endfor %}
                 </div>
-                <div class="tools-content" style="width: 565px; display: flex; justify-content: center; align-items: center; ">
-                    <div class="fade-in" style="box-sizing: border-box; max-width: 428px; display: flex; flex-direction: column; gap: 24px;">
+                <div class="tools-content">
+                    <div class="fade-in" style="box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
                         <div>
                             <p class="tools-left-header">Tools that creates value</p>
                         </div>
@@ -222,7 +222,7 @@
                         </div>
                         <div style="display: flex; gap: 24px;">
                             <button class="tools-btn-left">Find right tool -></button>
-                            <a href="https://forum.oasishq.org/" style="text-decoration: none; color: #000;" class="tools-btn-right"><button>Ask community -> </button></a>
+                            <a href="https://forum.oasishq.org/" style="text-decoration: none; color: #000;" class="tools-btn-right">Ask community -></a>
                         </div>
                     </div>
                 </div>
