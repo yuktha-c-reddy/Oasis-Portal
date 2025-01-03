@@ -382,7 +382,7 @@
                     solutionPartnerEl.src = caseStudy.solution_partner;
 
                     toolListContainer.innerHTML = caseStudy.tools_used
-                        .map(tool => `<img src="${tool.logo}" alt="${tool.name}">`)
+                        .map(tool => `<img src="${tool.logo}" style="width:50px; height:50px;" alt="${tool.name}">`)
                         .join('');
 
                     gsap.fromTo(
