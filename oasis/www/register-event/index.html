@@ -1,0 +1,179 @@
+{% extends "templates/layouts/layout.html" %}
+
+{% block content %}
+{% include "templates/web.html" %}
+<script src="/assets/oasis/js/scroll_animations.js?version=2.07"></script> 
+
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    :root {
+        --select-border: #777;
+        --select-focus: blue;
+        --select-arrow: var(--select-border);
+    }
+    .navbar{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .page_content{
+        min-height: 0px !important;
+    }
+    body{
+        color:rgba(0, 0, 0, 1) !important;
+        letter-spacing: 0px !important;
+        max-width: 1480px;
+        background-color: #f8f7ef;
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+    }
+    .input-field{
+        font-family: Inter, sans-serif;
+        width: 100%; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        background-color: transparent; 
+        outline: none; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 12px; 
+        line-height: 21px;
+        padding: 5px 15px;
+        border-radius: 10px;
+    }
+    .input-label{
+        font-family: Inter, sans-serif; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 14px; 
+        line-height: 21px;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none; 
+        background-color: transparent;
+        border: none;
+        padding: 5px 10px;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        outline: none;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    .select {
+        width: 100%;
+        font-size: 1.25rem;
+        cursor: pointer;
+        background-color: #fff;
+        font-family: Inter, sans-serif;
+        width: 100%; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        outline: none !important; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 12px; 
+        line-height: 21px;
+        padding-right: 15px;
+        border-radius: 10px;
+    }
+    @media screen and (max-width: 768px) {
+        .join-form{
+            padding: 20px !important;
+        }
+        .form-inner-component{
+            max-width: 100% !important;
+        }
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .join-form{
+            padding: 56px !important;
+        }
+        .form-inner-component{
+            max-width: 100% !important;
+        }
+    }
+</style>
+
+<section class="join-form" style="width: 100%; min-height: 100vh; padding: 24px 146px; display: flex; justify-content: center;">
+    <div class="form-inner-component fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 32px; border-radius: 10px; width: 60%; background-color: #fff;">
+        <p style="font-family: Inter, sans-serif; font-weight: 600; color: rgba(0, 0, 0, 1); font-size: 30px; line-height: 39px;">Register for an event</p>
+        <hr style="margin: 25px 0px">
+        <form id="eventForm">
+            <label for="user_name" class="input-label">Name</label><br>
+            <input type="text" id="user_name" name="user_name" class="input-field"><br><br>
+
+            <label for="org_name" class="input-label">Organisation Name</label><br>
+            <input type="text" id="org_name" name="org_name" class="input-field"><br><br>
+
+            <label for="email" class="input-label">Email Address</label><br>
+            <input type="text" id="email" name="email" class="input-field"><br><br>
+
+            <label for="number" class="input-label">Phone Number</label><br>
+            <input type="tel" id="number" name="number" class="input-field"><br><br>
+
+            <label for="city" class="input-label">City</label><br>
+            <input type="text" id="city" name="city" class="input-field"><br><br>
+
+            <label for="event" class="input-label">Event</label><br>
+            <div class="select">
+                <select id="event" name="event">
+                    <option disabled selected value></option>
+                    {% for event in upcomingevents %}
+                    <option value="{{event.name}}">{{event.event_title}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <br>
+
+            <button type="submit" style=" font-weight: 600; display: flex; justify-self: end; font-size: 14px; padding: 5px 12px; max-height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #000; color: #ffffff;">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('eventForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            frappe.call({
+                type: 'POST',
+                method: "oasis.www.register-event.index.validate_form",
+                args: {
+                    data: { 
+                        user_name: document.getElementById('user_name').value, 
+                        org_name: document.getElementById('org_name').value,
+                        city: document.getElementById('city').value,
+                        email: document.getElementById('email').value,
+                        number: '+91 '+ document.getElementById('number').value.trim(),
+                        event: document.getElementById('event').value,
+                     },
+                },
+                callback: function(r) {
+                    if (!r.exc) {
+                        frappe.msgprint('Event registration successful!');
+                        document.getElementById('user_name').value = '';
+                        document.getElementById('org_name').value = '';
+                        document.getElementById('city').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('number').value = '';
+                        document.getElementById('event').value = '';
+                    } else {
+                        frappe.msgprint('Error: ' + r.exc);
+                    }
+                }
+            });
+        });
+</script>
+{% endblock %}
+
+
+  

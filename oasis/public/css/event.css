@@ -1,0 +1,222 @@
+.events-header{
+    margin: 0px 146px;
+    padding: 129px 0px 64px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.events-main-heading{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.events-main-description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+.upcoming-events{
+    margin: 0px 146px;
+    padding: 64px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.events-heading{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.event-card{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    padding: 40px 24px;
+    gap: 5.82%;
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+}
+.event-banner-container{
+    width: 33.82%;
+    height: 313px;
+}
+.event-banner-image{
+    width: 100%;
+    height: 313px;
+    object-fit: cover;
+}
+.event-details{
+    width: 60.36%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.event-tag{
+    display: inline-flex;
+    max-width: max-content;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    gap: 10px;
+    background: #F5E253;
+    border-radius: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+.event-title{
+    font-family: 'Bricolage Grotesque';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 124%;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+.event-date{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+    opacity: 0.7;
+}
+.event-time{
+    font-weight: 400;
+}
+.event-venue{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+    opacity: 0.7;
+}
+.event-description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 136%;
+    letter-spacing: -0.01em;
+    color: #000000;
+    opacity: 0.7;
+}
+.event-register{
+    display: inline-flex;
+    max-width: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 10px;
+    background: #000000;
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 158%;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.event-register:hover{
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.past-events{
+    background-image: url('/assets/oasis/images/bgvector-min.svg'); 
+    padding: 64px 146px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.past-event-card{
+    width: 100%;
+    height: auto;
+    background-color: #F8F7EF;
+    display: flex;
+    padding: 40px 24px;
+    gap: 5.82%;
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+}
+.past-event-banner-image{
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+.past-event-banner-container{
+    width: 33.82%;
+    height: 205px;
+}
+@media screen and (max-width: 768px) {
+    .events-header{
+        margin: 0px 16px;
+        padding: 64px 0px 32px 0px;
+        gap: 24px;
+    }
+    .events-main-heading{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .events-main-description{
+        max-width: 98%;
+    }
+    .upcoming-events{
+        margin: 0px;
+        padding: 32px 0px 64px 0px;
+        gap: 16px;
+    }
+    .events-heading{
+        font-size: 24px;
+        line-height: 29px;
+        padding: 0px 16px;
+    }
+    .event-card{
+        flex-direction: column;
+        gap: 32px;
+    }
+    .event-banner-container{
+        width: 100%;
+        height: 194px;
+    }
+    .event-banner-image{
+        width: 100%;
+        height: 194px;
+    }
+    .event-details{
+        width: 100%;
+    }
+    .past-events{
+        margin: 0px;
+        padding: 32px 0px 64px 0px;
+        gap: 16px;
+    }
+    .past-event-card{
+        flex-direction: column;
+        gap: 32px;
+    }
+}

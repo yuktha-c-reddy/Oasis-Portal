@@ -287,7 +287,6 @@
     line-height: 158%;
     letter-spacing: -0.01em;
     color: #FFFFFF;
-    width: 219px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .organisation-cta-btn:hover{

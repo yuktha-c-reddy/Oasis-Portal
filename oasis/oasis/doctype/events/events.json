@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-01-07 10:46:59.759263",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "event_title",
+  "start_date",
+  "end_date",
+  "description",
+  "banner",
+  "upcoming_event",
+  "event_location",
+  "tag"
+ ],
+ "fields": [
+  {
+   "fieldname": "event_title",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Event Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "banner",
+   "fieldtype": "Attach Image",
+   "label": "Banner"
+  },
+  {
+   "default": "0",
+   "fieldname": "upcoming_event",
+   "fieldtype": "Check",
+   "label": "Upcoming Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "event_location",
+   "fieldtype": "Small Text",
+   "label": "Event Location"
+  },
+  {
+   "fieldname": "tag",
+   "fieldtype": "Select",
+   "label": "Event Tag",
+   "options": "Meet Up\nSummit\nWorkshop"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-09 15:34:49.747433",
+ "modified_by": "Administrator",
+ "module": "Oasis",
+ "name": "Events",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

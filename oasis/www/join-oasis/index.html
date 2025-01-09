@@ -162,7 +162,7 @@
             </label><br>
             <textarea id="org_mission_allignment" name="org_mission_allignment" class="input-field"></textarea><br><br>
 
-            <button type="submit" style="max-width: 123px; font-weight: 600; display: flex; justify-self: end; font-size: 14px; padding: 5px 10px; max-height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #000; color: #ffffff;">Submit</button>
+            <button type="submit" style="font-weight: 600; display: flex; justify-self: end; font-size: 14px; padding: 5px 12px; max-height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #000; color: #ffffff;">Submit</button>
         </form>
     </div>
 </section>
@@ -190,7 +190,7 @@
                 },
                 callback: function(r) {
                     if (!r.exc) {
-                        frappe.msgprint('Response Saved');
+                        frappe.msgprint('Registration complete!');
                         document.getElementById('name').value = '';
                         document.getElementById('category').value = '';
                         document.getElementById('city').value = '';
