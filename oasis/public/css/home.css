@@ -24,8 +24,10 @@ p {
     height: 686px; 
     background-color: white; 
     border: 0.5px solid rgba(0, 0, 0, 0.16); 
-    padding: 64px; display: flex; 
+    padding: 84px 64px; 
+    display: flex; 
     flex-direction: column; 
+    justify-content: end;
     gap: 64px;
 }
 .sect1-header{
