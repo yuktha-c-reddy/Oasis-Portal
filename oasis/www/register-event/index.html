@@ -104,29 +104,29 @@
     }
 </style>
 
-<section class="join-form" style="width: 100%; min-height: 100vh; padding: 24px 146px; display: flex; justify-content: center;">
+<section class="join-form" style="width: 100%; padding: 24px 146px; display: flex; justify-content: center;">
     <div class="form-inner-component fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 32px; border-radius: 10px; width: 60%; background-color: #fff;">
-        <p style="font-family: Inter, sans-serif; font-weight: 600; color: rgba(0, 0, 0, 1); font-size: 30px; line-height: 39px;">Register for an event</p>
+        <p style="font-family: Inter, sans-serif; font-weight: 600; color: rgba(0, 0, 0, 1); font-size: 30px; line-height: 39px;">Event Registration</p>
         <hr style="margin: 25px 0px">
         <form id="eventForm">
             <label for="user_name" class="input-label">Name</label><br>
-            <input type="text" id="user_name" name="user_name" class="input-field"><br><br>
+            <input type="text" id="user_name" name="user_name" class="input-field" required><br><br>
 
             <label for="org_name" class="input-label">Organisation Name</label><br>
-            <input type="text" id="org_name" name="org_name" class="input-field"><br><br>
+            <input type="text" id="org_name" name="org_name" class="input-field" required><br><br>
 
             <label for="email" class="input-label">Email Address</label><br>
-            <input type="text" id="email" name="email" class="input-field"><br><br>
+            <input type="text" id="email" name="email" class="input-field" required><br><br>
 
             <label for="number" class="input-label">Phone Number</label><br>
-            <input type="tel" id="number" name="number" class="input-field"><br><br>
+            <input type="tel" id="number" name="number" class="input-field" required><br><br>
 
             <label for="city" class="input-label">City</label><br>
-            <input type="text" id="city" name="city" class="input-field"><br><br>
+            <input type="text" id="city" name="city" class="input-field" required><br><br>
 
-            <label for="event" class="input-label">Event</label><br>
+            <label for="event" class="input-label">Select Event</label><br>
             <div class="select">
-                <select id="event" name="event">
+                <select id="event" name="event" required>
                     <option disabled selected value></option>
                     {% for event in upcomingevents %}
                     <option value="{{event.name}}">{{event.event_title}}</option>
