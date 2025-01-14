@@ -5,7 +5,7 @@ def get_context(context):
             "name": "Akhila Somanath", "title": "Co-Founder, Tech4Good Community", "profile": "/assets/oasis/images/image (1).png"
         },
         {
-            "name": "Kailash Nadh", "title": "Co-Founder, Tech4Good Community", "profile": "/assets/oasis/images/image (2).png"
+            "name": "Kailash Nadh", "title": "Co-Founder, Zerodha", "profile": "/assets/oasis/images/image (2).png"
         },
         {
             "name": "Kuldeep Dantewadia", "title": "Co-Founder, Reap Benefit", "profile": "/assets/oasis/images/image (3).png"
