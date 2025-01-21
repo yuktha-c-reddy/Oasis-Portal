@@ -1,0 +1,248 @@
+{% extends "templates/layouts/layout.html" %}
+
+{% block content %}
+{% include "templates/web.html" %}
+<script src="/assets/oasis/js/scroll_animations.js?version=2.07"></script> 
+
+<style>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    :root {
+        --select-border: #777;
+        --select-focus: blue;
+        --select-arrow: var(--select-border);
+    }
+    .navbar{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    .page_content{
+        min-height: 0px !important;
+    }
+    body{
+        color:rgba(0, 0, 0, 1) !important;
+        letter-spacing: 0px !important;
+        max-width: 1480px;
+        background-color: #f8f7ef;
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+    }
+    .input-field{
+        font-family: Inter, sans-serif;
+        width: 100%; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        background-color: transparent; 
+        outline: none; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 12px; 
+        line-height: 21px;
+        padding: 5px 15px;
+        border-radius: 10px;
+    }
+    .input-label{
+        font-family: Inter, sans-serif; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 14px; 
+        line-height: 21px;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none; 
+        background-color: transparent;
+        border: none;
+        padding: 5px 10px;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        outline: none;
+    }
+    select::-ms-expand {
+        display: none;
+    }
+    .select {
+        width: 100%;
+        font-size: 1.25rem;
+        cursor: pointer;
+        background-color: #fff;
+        font-family: Inter, sans-serif;
+        width: 100%; 
+        border: 0.5px solid rgba(0, 0, 0, 0.16); 
+        outline: none !important; 
+        font-weight: 400; 
+        color: rgba(0, 0, 0, 1); 
+        font-size: 12px; 
+        line-height: 21px;
+        padding-right: 15px;
+        border-radius: 10px;
+    }
+    @media screen and (max-width: 768px) {
+        .join-form{
+            padding: 20px !important;
+        }
+        .form-inner-component{
+            width: 100% !important;
+        }
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .join-form{
+            padding: 56px !important;
+        }
+        .form-inner-component{
+            width: 100% !important;
+        }
+    }
+</style>
+
+<section class="join-form" style="width: 100%; min-height: 100vh; padding: 24px 146px; display: flex; justify-content: center;">
+    <div class="form-inner-component fade-in" style="border: 0.5px solid rgba(0, 0, 0, 0.16); padding: 32px; border-radius: 10px; width: 60%; background-color: #fff;">
+        <p style="font-family: Inter, sans-serif; font-weight: 600; color: rgba(0, 0, 0, 1); font-size: 30px; line-height: 39px;">Join OASIS</p>
+        <P style="font-family: Inter, sans-serif; font-weight: 400; color: rgba(0, 0, 0, 1); font-size: 16px; line-height: 21px; margin: 8px 0px;">Be an oasis member</P>
+        <hr style="margin: 25px 0px">
+        <form id="joinForm">
+            <label for="category" class="input-label">Category</label><br>
+            <div class="select">
+                <select id="category" name="category">
+                    <option disabled selected value></option>
+                    <option value="NGOs">NGOs</option>
+                    <option value="NPOs">NPOs</option>
+                    <option value="Tech Vendors">Tech Vendors</option>
+                    <option value="Tech Volunteers">Tech Volunteers</option>
+                </select>
+            </div>
+            <br>
+            <label for="organization_name" class="input-label">Organization Name</label><br>
+            <input type="text" id="organization_name" name="organization_name" class="input-field"><br><br>
+
+            <label for="contact_person" class="input-label">Contact Person</label><br>
+            <input type="text" id="contact_person" name="contact_person" class="input-field"><br><br>
+
+            <label for="email" class="input-label">Email Address</label><br>
+            <input type="text" id="email" name="email" class="input-field"><br><br>
+
+            <label for="phone" class="input-label">Phone Number</label><br>
+            <input type="tel" id="phone" name="phone" class="input-field"><br><br>
+
+            <label for="web_link" class="input-label">Website/Social Media Link</label><br>
+            <input type="text" id="web_link" name="web_link" class="input-field"><br><br>
+
+            <div class="ngoFields" id="ngoFields" style="display: none;">
+
+                <label for="primary_sector_of_work" class="input-label">Primary Sector of Work</label><br>
+                <input type="text" id="primary_sector_of_work" name="primary_sector_of_work" class="input-field"><br><br>
+
+                <label for="challenges_with_technology" class="input-label">Challenges Your Organization Faces with Technology</label><br>
+                <textarea id="challenges_with_technology" name="challenges_with_technology" class="input-field"></textarea><br><br>
+
+                <label for="current_use_of_technology" class="input-label">Current Use of Technology or Tools</label><br>
+                <textarea id="current_use_of_technology" name="current_use_of_technology" class="input-field"></textarea><br><br>
+
+                <label for="expectations_or_ideas" class="input-label">How Do You Think OASIS Can Support Your Mission?</label><br>
+                <textarea id="expectations_or_ideas" name="expectations_or_ideas" class="input-field"></textarea><br><br>
+
+            </div>
+
+            <div class="techFields" id="techFields" style="display: none;">
+                <label for="specialization" class="input-label">Specialization/Expertise</label><br>
+                <input type="text" id="specialization" name="specialization" class="input-field"><br><br>
+
+                <label for="experience_with_foss" class="input-label">Experience with FOSS Tools or Projects</label><br>
+                <textarea id="experience_with_foss" name="experience_with_foss" class="input-field"></textarea><br><br>
+
+                <label for="motivation_to_work_with_social_sector" class="input-label">What Motivates You to Work with the Social Sector?</label><br>
+                <textarea id="motivation_to_work_with_social_sector" name="motivation_to_work_with_social_sector" class="input-field"></textarea><br><br>
+
+                <label for="expectations_or_ideas" class="input-label">How Do You Think OASIS Can Support Your Mission?</label><br>
+                <textarea id="expectations_or_ideas" name="expectations_or_ideas" class="input-field"></textarea><br><br>
+
+                <label for="additional_information" class="input-label"> Additional Information (Optional)</label><br>
+                <textarea id="additional_information" name="additional_information" class="input-field"></textarea><br><br>
+
+            </div>
+
+            <button type="submit" style="font-weight: 600; display: flex; justify-self: end; font-size: 14px; padding: 5px 12px; max-height: 46px; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px; background-color: #000; color: #ffffff;">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById('category').addEventListener('change', function () {
+        const selectedCategory = this.value;
+        const ngoFields = document.getElementById('ngoFields');
+        const techFields = document.getElementById('techFields');
+
+        // Hide all dynamic sections initially
+        ngoFields.style.display = 'none';
+        techFields.style.display = 'none';
+
+        // Show the relevant fields based on the selected category
+        if (selectedCategory === 'NGOs' || selectedCategory === 'NPOs') {
+            ngoFields.style.display = 'block';
+        } else if (selectedCategory === 'Tech Vendors' || selectedCategory === 'Tech Volunteers') {
+            techFields.style.display = 'block';
+        }
+    });
+
+
+    document.getElementById('joinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            frappe.call({
+                type: 'POST',
+                method: "oasis.www.join-us.index.validate_form",
+                args: {
+                    data: { 
+                        organization_name: document.getElementById('organization_name').value, 
+                        category: document.getElementById('category').value,
+                        contact_person: document.getElementById('contact_person').value,
+                        email: document.getElementById('email').value,
+                        phone: '+91 '+ document.getElementById('phone').value.trim(),
+                        web_link: document.getElementById('web_link').value,
+                        primary_sector_of_work: document.getElementById('primary_sector_of_work').value,
+                        challenges_with_technology: document.getElementById('challenges_with_technology').value,
+                        current_use_of_technology: document.getElementById('current_use_of_technology').value,
+                        expectations_or_ideas: document.getElementById('expectations_or_ideas').value,
+                        specialization: document.getElementById('specialization').value,
+                        experience_with_foss: document.getElementById('experience_with_foss').value,
+                        motivation_to_work_with_social_sector: document.getElementById('motivation_to_work_with_social_sector').value,
+                        additional_information: document.getElementById('additional_information').value,
+                     },
+                },
+                callback: function(r) {
+                    if (!r.exc) {
+                        frappe.msgprint('Thank you for joining us.');
+                        document.getElementById('organization_name').value = '';
+                        document.getElementById('category').value = '';
+                        document.getElementById('contact_person').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('phone').value = '';
+                        document.getElementById('web_link').value = '';
+                        document.getElementById('primary_sector_of_work').value = '';
+                        document.getElementById('challenges_with_technology').value = '';
+                        document.getElementById('current_use_of_technology').value = '';
+                        document.getElementById('expectations_or_ideas').value = '';
+                        document.getElementById('specialization').value = '';
+                        document.getElementById('experience_with_foss').value = '';
+                        document.getElementById('motivation_to_work_with_social_sector').value = '';
+                        document.getElementById('additional_information').value = '';
+                    } else {
+                        frappe.msgprint('Error: ' + r.exc);
+                    }
+                }
+            });
+        });
+</script>
+{% endblock %}
+
+
+  

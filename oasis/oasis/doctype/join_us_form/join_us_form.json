@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-01-21 18:14:23.351135",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "organization_name",
+  "contact_person",
+  "email",
+  "phone",
+  "web_link",
+  "primary_sector_of_work",
+  "challenges_with_technology",
+  "current_use_of_technology",
+  "expectations_or_ideas",
+  "specialization",
+  "experience_with_foss",
+  "motivation_to_work_with_social_sector",
+  "additional_information"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "NGOs\nNPOs\nTech Vendors\nTech Volunteers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organization Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_person",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "web_link",
+   "fieldtype": "Small Text",
+   "label": "Website/Social Media Link",
+   "reqd": 1
+  },
+  {
+   "fieldname": "primary_sector_of_work",
+   "fieldtype": "Small Text",
+   "label": "Primary Sector of Work"
+  },
+  {
+   "fieldname": "challenges_with_technology",
+   "fieldtype": "Long Text",
+   "label": "Challenges Your Organization Faces with Technology"
+  },
+  {
+   "fieldname": "current_use_of_technology",
+   "fieldtype": "Long Text",
+   "label": "Current Use of Technology or Tools"
+  },
+  {
+   "fieldname": "expectations_or_ideas",
+   "fieldtype": "Long Text",
+   "label": "How Do You Think OASIS Can Support Your Mission?"
+  },
+  {
+   "fieldname": "specialization",
+   "fieldtype": "Small Text",
+   "label": "Specialization/Expertise"
+  },
+  {
+   "fieldname": "experience_with_foss",
+   "fieldtype": "Long Text",
+   "label": "Experience with FOSS Tools or Projects"
+  },
+  {
+   "fieldname": "motivation_to_work_with_social_sector",
+   "fieldtype": "Long Text",
+   "label": "What Motivates You to Work with the Social Sector?"
+  },
+  {
+   "fieldname": "additional_information",
+   "fieldtype": "Long Text",
+   "label": " Additional Information (Optional)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-21 19:02:47.260353",
+ "modified_by": "Administrator",
+ "module": "Oasis",
+ "name": "Join Us Form",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
