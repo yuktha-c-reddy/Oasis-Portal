@@ -24,7 +24,14 @@ doc_events = {
         "on_update": "oasis.www.home.index.clear_specific_cache",
     },
 }
-
+fixtures=[
+{
+"doctype" :"Web Page"
+},
+{
+"doctype" :"Web Template"
+}
+]
 
 
 # website_route_rules = [

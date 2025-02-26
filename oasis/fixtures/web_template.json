@@ -1,0 +1,217 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [],
+  "modified": "2025-02-23 08:55:54.242212",
+  "module": "Oasis",
+  "name": "footer-custom",
+  "standard": 0,
+  "template": "    <footer>\n        <div style=\"background-color: #f8f7ef; width: 100%; height: auto; display: flex; align-items: center; justify-content: center;\">\n            <img class=\"footer-vector\" src=\"/assets/oasis/images/footer_vector.svg\" alt=\"\">\n        </div>\n    </footer>\n    ",
+  "type": "Footer"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [],
+  "modified": "2025-02-23 08:56:02.310792",
+  "module": "Oasis",
+  "name": "navbar-custom",
+  "standard": 0,
+  "template": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta name=\"description\" content=\"A network of organizations united by the vision that Free and Open-Source Software (FOSS) can empower citizen sector organizations and communities to create positive impact at scale.\" />\n\n    <script type=\"text/javascript\" src=\"/assets/frappe/js/lib/jquery/jquery.min.js\"></script>\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css\">\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n    <link href=\"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap\" rel=\"stylesheet\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap\" rel=\"stylesheet\">\n    <link href=\"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Pen+Script&display=swap\" rel=\"stylesheet\">\n    \n    <script src=\"https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js\"></script>\n\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js\"></script>\n\n    <script src=\"https://cdn.tailwindcss.com\"></script>\n\n    <link rel=\"stylesheet\" href=\"/assets/oasis/css/oasis.css?version=1.16\">\n    <title>{% block title %}{{ title | string }}{% endblock %}</title>\n        \n</head>\n<body style=\"min-height: 100vh;\" class=\"antialiased\">\n    <nav style=\"background-color: #f8f7ef; width: 100%; min-height: 100px; margin: 0px auto; display: flex; align-items: center;\">\n        <div class=\"nav-menu\" style=\"display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0px 146px;\">\n            <div class=\"nav-items\" style=\"display: flex; align-items: center; justify-content: center; gap: 10px; font-family: Inter, sans-serif; font-size: 14px; font-weight: 700; border: 0.5px solid rgba(0, 0, 0, 0.16); border-radius: 8px;\">\n                <a style=\"color: #000; text-decoration: none;\" href=\"/about\"><p style=\"margin: 0px; cursor: pointer; \">About</p></a>\n                <a style=\"color: #000; text-decoration: none;\" href=\"/membership\"><p style=\"margin: 0px; cursor: pointer; \">Membership</p></a>\n                <a style=\"color: #000; text-decoration: none;\" href=\"/board\"><p style=\"margin: 0px; cursor: pointer; \">Board</p></a>\n                <a style=\"color: #000; text-decoration: none;\" href=\"/events\"><p style=\"margin: 0px; cursor: pointer; \">Events</p></a>\n                <a style=\"color: #000; text-decoration: none;\" href=\"/activities\"><p style=\"margin: 0px; cursor: pointer; \">Activities</p></a>\n            </div>\n            <div class=\"logo-container\" style=\"cursor: pointer; padding: 8px;\">\n                <a href=\"/\"><img class=\"logo\" src=\"/assets/oasis/images/logo.svg\" alt=\"\"></a>\n            </div>\n            <div class=\"nav-btns\" style=\"font-size: 14px; font-family: Inter, sans-serif; display: flex; gap: 16px;\">\n                <a href=\"https://forum.oasishq.org/\"><button class=\"forum-btn\"> Forum - let's chat</button></a>\n                <a href=\"/join-oasis\"><button class=\"join\"> Join Us </button></a>\n            </div>\n            <div class=\"menu-icon\" style=\"cursor: pointer;\" id=\"toggleNavbarMenu\">\n                <img src=\"/assets/oasis/images/Icon (7).svg\" alt=\"\">\n            </div>\n        </div>\n    </nav>\n\n    <div style=\"position: absolute;\" id=\"overlayNavbarMenu\">\n        <div class=\"overlayContent\">\n            <div style=\"display: flex; flex-direction: column; min-height: 100vh;\">\n                <div style=\"width: 100%; min-height: 100px; padding: 0px 16px; display: flex; justify-content: space-between; align-items: center;\">\n                    <div class=\"logo-container\" style=\"cursor: pointer; padding: 8px;\">\n                        <a href=\"/\"><img class=\"logo\" src=\"/assets/oasis/images/logo.svg\" alt=\"\"></a>\n                    </div>\n                    <div class=\"menu-icon\" style=\"cursor: pointer;\" id=\"closeNavbarMenu\">\n                        <img style=\"width: 15px;\" src=\"/assets/oasis/images/close.svg\" alt=\"\">\n                    </div>\n                </div>\n                <div style=\"padding: 32px 16px;\">\n                    <a href=\"/about\" class=\"nav-menu-item\" style=\"text-decoration: none; color: inherit;\">\n                        <div style=\"padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer;\">\n                            <p style=\"margin: 0px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; padding: 12px 10px; line-height: 22px; text-transform: uppercase;\">About</p>\n                        </div>\n                    </a>\n                    <hr style=\"height: 1px; margin: 0px 12px;\">\n                    <a href=\"/membership\" class=\"nav-menu-item\" style=\"text-decoration: none; color: inherit;\">\n                        <div style=\"padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer;\">\n                            <p style=\"margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;\">Membership</p>\n                        </div>\n                    </a>\n                    <hr style=\"height: 1px; margin: 0px 12px;\">\n                    <a href=\"/board\" class=\"nav-menu-item\" style=\"text-decoration: none; color: inherit;\">\n                        <div style=\"padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer; \">\n                        <p style=\"margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;\">Board</p>\n                        </div>\n                    </a>\n                    <hr style=\"height: 1px; margin: 0px 12px;\">\n                    <a href=\"/events\" class=\"nav-menu-item\" style=\"text-decoration: none; color: inherit;\">\n                        <div style=\"padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer; \">\n                            <p style=\"margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;\">Events</p>\n                        </div>\n                    </a>\n                    <hr style=\"height: 1px; margin: 0px 12px;\">\n                    <a href=\"/activities\" class=\"nav-menu-item\" style=\"text-decoration: none; color: inherit;\">\n                        <div style=\"padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer; \">\n                            <p style=\"margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;\">Activities</p>\n                        </div>\n                    </a>\n                    <hr style=\"height: 1px; margin: 0px 12px;\">\n                    <a href=\"/join-oasis\" class=\"nav-menu-item\" style=\"text-decoration: none; color: inherit;\">\n                        <div style=\"padding: 12px 15px; margin: 0px; display: flex; justify-content: space-between; cursor: pointer; \">\n                            <p style=\"margin: 0px; padding: 12px 10px; font-family: Inter, sans-serif; font-size: 18px; font-weight: 600; line-height: 22px; text-transform: uppercase;\">Join Us</p>\n                        </div>\n                    </a>\n                </div>\n                <div style=\"background-color: #f8f7ef; width: 100%; height: auto; display: flex; justify-content: center; margin-top: auto; align-self: flex-end;\">\n                    <img class=\"footer-vector\" src=\"/assets/oasis/images/footer_vector.svg\" alt=\"\">\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"main\" style=\"width: 100%; height: auto; flex: 1; background-color: #f8f7ef;\">\n        \n    </div>\n\n\n\n    <script>\n        document.addEventListener('DOMContentLoaded', function() {\n            const menuToggle = document.getElementById('toggleNavbarMenu');\n            const overlayMenu = document.getElementById('overlayNavbarMenu').querySelector('.overlayContent');\n            const closeMenu = document.getElementById('closeNavbarMenu');\n\n            function toggleMenu() {\n                overlayMenu.classList.toggle('show');\n            }\n\n            menuToggle.addEventListener('click', toggleMenu);\n            closeMenu.addEventListener('click', toggleMenu);\n\n        });\n    </script>\n</body>\n</html>",
+  "type": "Navbar"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [
+   {
+    "default": null,
+    "fieldname": "eventimg",
+    "fieldtype": "Attach Image",
+    "label": "eventimg",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "event_tag",
+    "fieldtype": "Data",
+    "label": "event_tag",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "event_title",
+    "fieldtype": "Data",
+    "label": "event_title",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "start",
+    "fieldtype": "Data",
+    "label": "start",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "end",
+    "fieldtype": "Data",
+    "label": "end",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "event_location",
+    "fieldtype": "Data",
+    "label": "event_location",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "event_description",
+    "fieldtype": "Text",
+    "label": "event_description",
+    "options": null,
+    "reqd": 0
+   }
+  ],
+  "modified": "2025-02-23 10:31:24.755717",
+  "module": "Oasis",
+  "name": "events",
+  "standard": 0,
+  "template": "<style>\n    .event-title{\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 36px;\n    line-height: 124%;\n    letter-spacing: -0.04em;\n    color: #000000;\n}\n.event-tag{\n    display: inline-flex;\n    max-width: max-content;\n    justify-content: center;\n    align-items: center;\n    padding: 4px 16px;\n    gap: 10px;\n    background: #F5E253;\n    border-radius: 40px;\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 500;\n    font-size: 12px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n}\n.event-card{\n    width: 100%;\n    height: auto;\n    background-color: #ffffff;\n    display: flex;\n    padding: 40px 24px;\n    gap: 5.82%;\n    border-top: 1px solid rgba(0, 0, 0, 0.16);\n}\n.event-banner-container{\n    width: 33.82%;\n    height: 313px;\n}\n.event-banner-image{\n    width: 100%;\n    height: 313px;\n    object-fit: cover;\n}\n.event-details{\n    width: 60.36%;\n    display: flex;\n    flex-direction: column;\n    gap: 20px;\n}\n.event-date{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 700;\n    font-size: 16px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n.event-time{\n    font-weight: 400;\n}\n.event-venue{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 700;\n    font-size: 16px;\n    line-height: 0%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n.event-description{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 400;\n    font-size: 20px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n.event-register{\n    display: inline-flex;\n    max-width: max-content;\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    padding: 12px 16px;\n    gap: 10px;\n    background: #000000;\n    border-radius: 8px;\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 700;\n    font-size: 14px;\n    line-height: 158%;\n    letter-spacing: -0.01em;\n    color: #FFFFFF;\n    text-decoration: none;\n    transition: background-color 0.3s ease, transform 0.3s ease;\n}\n.event-date{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 700;\n    font-size: 16px;\n    line-height: 100%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n@media screen and (max-width: 768px) {\n        .event-card{\n        flex-direction: column;\n        gap: 32px;\n    }\n        .event-banner-container{\n        width: 100%;\n        height: 194px;\n    }\n    .event-banner-image{\n        width: 100%;\n        height: 194px;\n    }\n        .event-details{\n        width: 100%;\n    }\n}\n</style>\n<div class=\"event-card fade-in\">\n            <div class=\"event-banner-container\">\n                <img class=\"event-banner-image\" src=\"{{eventimg}}\" alt=\"\">\n            </div>\n            <div class=\"event-details\">\n                <p class=\"event-tag\">{{event_tag}}</p>\n                <p class=\"event-title\">{{event_title}}</p>\n                <div class=\"event-date-container\" > <p><b>{{start}} - {{end}}</b></p> </div>\n                <p class=\"event-venue\">{{event_location}}</p>\n                <p class=\"event-description\">{{event_description}}</p>\n                <a href=\"/register-event\" style=\"text-decoration: none; color: #ffffff;\"><button class=\"event-register\">Register now <img style=\"width: 12px;\" src=\"/assets/oasis/images/arrow_right_white.svg\" alt=\"\"></button></a>\n            </div>\n        </div>",
+  "type": "Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [
+   {
+    "default": null,
+    "fieldname": "title",
+    "fieldtype": "Data",
+    "label": "title",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "desc",
+    "fieldtype": "Text",
+    "label": "desc",
+    "options": null,
+    "reqd": 0
+   }
+  ],
+  "modified": "2025-02-23 10:24:43.092046",
+  "module": "Oasis",
+  "name": "board",
+  "standard": 0,
+  "template": "      {% set members = [\n    {\"name\": \"Akhila Somanath\", \"title\": \"Co-Founder, Tech4Good Community\", \"profile\": \"/assets/oasis/images/image (1).png\"},\n    {\"name\": \"Kailash Nadh\", \"title\": \"Co-Founder, Zerodha\", \"profile\": \"/assets/oasis/images/image (2).png\"},\n    {\"name\": \"Kuldeep Dantewadia\", \"title\": \"Co-Founder, Reap Benefit\", \"profile\": \"/assets/oasis/images/image (3).png\"},\n    {\"name\": \"Moosa Mehar MP\", \"title\": \"Co-Founder, TinkerHub\", \"profile\": \"/assets/oasis/images/image (4).png\"},\n    {\"name\": \"Poruri Sai Rahul\", \"title\": \"CEO, FOSS United\", \"profile\": \"/assets/oasis/images/image (5).png\"},\n    {\"name\": \"Shemeer Babu\", \"title\": \"Co-Founder, Aikyam Fellows\", \"profile\": \"/assets/oasis/images/image (6).jpeg\"},\n    {\"name\": \"Vinay Kumar\", \"title\": \"Software Engineer, Zerodha\", \"profile\": \"/assets/oasis/images/image (7).png\"},\n    {\"name\": \"Vishnu Sudhakaran\", \"title\": \"Software Engineer, Zerodha\", \"profile\": \"/assets/oasis/images/image (8).png\"},\n    {\"name\": \"Irina Snissar Lobo\", \"title\": \"System Change Practitioner, Curator & Writer\", \"profile\": \"/assets/oasis/images/image (9).png\"}\n] %}\n<style>\n\n.organisation-left-container{\n    max-width: 281px;\n    display: flex;\n    flex-direction: column;\n    gap: 16px;\n}\n.board-heading{\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 36px;\n    line-height: 124%;\n    letter-spacing: -0.04em;\n    color: #000000;\n}\n.board-description{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 400;\n    font-size: 16px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n.organisation-board-members{\n    padding: 64px 0px;\n    display: flex;\n    gap: 96px;\n}\n    .board-members{\n    flex: 1;\n    display: flex;\n    flex-wrap: wrap;\n}\n.board-member-profile{\n    width: 190px;\n    height: 206px;\n    display: flex;\n    flex-direction: column;\n    padding-bottom: 40px;\n    gap: 16px;\n}\n.member-profile{\n    width: 96px;\n    height: 96px;\n    border-radius: 50%;\n    object-fit: cover;\n}\n.member-name{\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 16px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n.member-title{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 400;\n    font-size: 12px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n@media screen and (max-width: 768px) {\n    .organisation-board-members{\n        padding: 36px 0px 0px 0px;\n        flex-direction: column;\n        gap: 36px;\n    }\n        .organisation-container{\n        padding: 36px 16px;\n    }\n     .organisation-left-container{\n        max-width: 100%;\n    }\n    .board-member-profile{\n        width: 50%;\n        height: auto;\n    }\n    \n}\n@media screen and (min-width: 769px) and (max-width: 1024px) {\n    .organisation-container{\n        padding: 56px;\n    }  \n} \n</style>\n   <div class=\"organisation container\">\n      <div class=\"organisation-board-members fade-in\">\n            <div class=\"organisation-left-container\">\n                <p class=\"board-heading\">{{ _(title) }}</p>\n                <p class=\"board-description\"> {{ _(desc) }}</p></div>\n            <div class=\"board-members\">\n                {% for member in members %}\n                <div class=\"board-member-profile\">\n                    <img class=\"member-profile\" src=\"{{member.profile}}\" alt=\"\">\n                    <div>\n                        <p class=\"member-name\">{{member.name}}</p>\n                        <p class=\"member-title\">{{member.title}}</p>\n                    </div>\n                </div>\n                {% endfor %}\n            </div>\n        </div>\n        </div>",
+  "type": "Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [
+   {
+    "default": null,
+    "fieldname": "bgg_color ",
+    "fieldtype": "Data",
+    "label": "bgg_color ",
+    "options": "",
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "content_summary",
+    "fieldtype": "Text",
+    "label": "content_summary",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "illustration",
+    "fieldtype": "Attach Image",
+    "label": "illustration",
+    "options": null,
+    "reqd": 0
+   }
+  ],
+  "modified": "2025-02-23 10:37:27.909178",
+  "module": "Oasis",
+  "name": "activity_card",
+  "standard": 0,
+  "template": "<style>\n    .activity-card-vector{\n    position: absolute;\n    bottom: -70px;\n    right: 0px;\n}\n.activity-cards{\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    gap: 36px;\n}\n.activity-card{\n    width: 100%;\n    height: auto;\n    padding: 64px 32px;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    position: relative;\n    overflow: hidden;\n}\n.activity-card-desc{\n    max-width: 605px;\n    font-family: 'Inter', sans-serif; \n    margin: 0px; \n    font-size: 24px; \n    font-weight: 500; \n    line-height: 30px; \n    color: #000000;\n}\n@media screen and (max-width: 768px) {\n        .activity-cards{\n        gap: 21px;\n        flex-direction: row;\n        overflow-x: scroll;\n        padding-left: 16px; \n        padding-right: 16px; \n        scroll-padding-left: 16px; \n        -webkit-overflow-scrolling: touch; \n        -ms-overflow-style: none; \n        scrollbar-width: none; \n        -webkit-scrollbar-width: none;\n\n    }\n    .activity-card{\n        min-width: 259px;\n        height: 362px;\n        padding: 38px 19px;\n        flex-direction: column;\n        align-items: start;\n    }\n        .activity-card-desc{\n        font-size: 14px;\n        line-height: 17px;\n    }\n        .activity-card-vector{\n        bottom: 0px;\n    }\n\n}\n</style>\n{%set color_map = {\n    \"Green\": \"#28a745\",\n    \"Blue\": \"#007bff\",\n    \"Pink\": \"#e83e8c\",\n    \"Red\": \"#dc3545\",\n    \"Yellow\": \"#ffc107\"\n}%}\n<div class=\"activity-main-container\">\n    <div class=\"activity-main-content fade-in\">\n<div class=\"activity-cards\">\n    <div class=\"activity-card fade-in\" style=\"background-color: {{ color_map[bgg_color] or '#28a745'}};\">\n        <div class=\"activity-card-desc\">\n            <p>{{ content_summary }}</p>\n        </div>\n        \n        <div class=\"activity-card-vector\">\n            <img src=\"{{illustration}}\" alt=\"\">\n        </div>\n    </div>\n</div>\n</div>\n</div>",
+  "type": "Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [],
+  "modified": "2025-02-23 10:26:24.751997",
+  "module": "Oasis",
+  "name": "why-join",
+  "standard": 0,
+  "template": "{% set whyjoin = [\n    {\"title\": \"Access to Expertise\", \"desc\": \"Engage with leading minds in FOSS and social innovation.\"},\n    {\"title\": \"Networking Opportunities\", \"desc\": \"Connect with like-minded individuals and organizations working towards similar goals.\"},\n    {\"title\": \"New Opportunities\", \"desc\": \"Explore collaborations, projects, and initiatives that align technology with social good.\"},\n    {\"title\": \"Knowledge & Resources\", \"desc\": \"Leverage curated educational materials, playbooks, and case studies to amplify your impact.\"},\n    {\"title\": \"Community Visibility\", \"desc\": \"Showcase your work and contributions to a global audience committed to open-source principles.\"}\n] %}\n\n<div class=\"why-join-section\">\n    <div class=\"why-join-heading fade-in\">\n        <p>Why Join OASIS?</p>\n    </div>\n    <div class=\"why-join-content\">\n        {% for item in whyjoin %}\n        <div class=\"why-join-card fade-in\">\n            <p class=\"why-join-title\">{{ item.title }}</p>\n            <p class=\"why-join-desc\">{{ item.desc }}</p>\n        </div>\n        {% endfor %}\n    </div>\n</div>\n\n<style>\n.why-join-section{\n    display: flex;\n    align-items: start;\n}\n.why-join-heading{\n    width: 371px;\n    display: flex;\n    justify-content: start;\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 36px;\n    line-height: 124%;\n    letter-spacing: -0.04em;\n    color: #000000;\n}\n.why-join-content{\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    gap: 24px;\n}\n.why-join-card{\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n    padding-bottom: 32px;\n}\n.why-join-title{\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 24px;\n    line-height: 124%;\n    letter-spacing: -0.04em;\n    color: #000000;\n}\n.why-join-desc{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 400;\n    font-size: 20px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n@media screen and (max-width: 768px) {\n        .why-join-section{\n        padding: 32px 16px;\n        flex-direction: column;\n        gap: 32px;\n    }\n    .why-join-heading{\n        width: 100%;\n    }\n}\n</style>\n",
+  "type": "Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [],
+  "modified": "2025-02-23 09:41:21.893143",
+  "module": "Oasis",
+  "name": "mission",
+  "standard": 0,
+  "template": "\n<style>\n    .about-mission{\n    padding: 64px 0px;\n    display: flex;\n    gap: 96px;\n}\n\n.about-mission-heading{\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 36px;\n    line-height: 124%;\n    letter-spacing: -0.04em;\n    color: #000000;\n}\n.about-mission-text{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 400;\n    font-size: 20px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n.mission-sub-container{\n    display: flex;\n    flex: 1;\n    gap: 60px;\n}\n.mission-box{\n    box-sizing: border-box;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    padding: 40px 0px;\n    gap: 20px;\n    border-top: 1px solid rgba(0, 0, 0, 0.16);\n}\n@media screen and (max-width: 768px) {\n    .about-main-container{\n        padding: 0px 16px;\n    }\n    .about-mission{\n        padding: 36px 0px;\n        flex-direction: column;\n        gap: 36px;\n    }\n    .about-mission-heading{\n        font-size: 24px;\n        line-height: 29px;\n    }\n    .mission-sub-container{\n        flex-direction: column;\n        gap: 0px;\n    }\n    .mission-box{\n        padding: 24px 0px 40px 0px;\n    }\n}\n</style>\n<div class=\"about-main-container\">\n<div class=\"about-mission fade-in\">\n            <div>\n                <p class=\"about-mission-heading\">Mission</p>\n            </div>\n            <div class=\"mission-sub-container\">\n                <div class=\"mission-box\">\n                    <p class=\"about-mission-text\">To address systemic technological gaps and lack of technological capacity in the social sector through the adoption of FOSS.</p>\n                </div>\n                <div class=\"mission-box\">\n                    <p class=\"about-mission-text\">To help organizations attain technological self-sufficiency to better focus on their social work and increase its impact.</p>\n                </div>\n                <div class=\"mission-box\">\n                    <p class=\"about-mission-text\">To help create a thriving ecosystem of FOSS innovation and collaboration in the social sector, made of diverse stakeholders.</p>\n                </div>\n            </div>\n        </div>\n</div>",
+  "type": "Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [],
+  "modified": "2025-02-23 09:44:48.181536",
+  "module": "Oasis",
+  "name": "Join Our Movement",
+  "standard": 0,
+  "template": "<style>\n.organisation-cta{\n    padding: 64px;\n    background-color: #F5E253;\n    display: flex;\n    flex-direction: column;\n    gap: 24px;\n}\n.organisation-cta-header{\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 36px;\n    line-height: 124%;\n    letter-spacing: -0.04em;\n    color: #000000;\n}\n.organisation-cta-description{\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 400;\n    font-size: 20px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n    opacity: 0.7;\n}\n.organisation-cta-subtext{\n    font-family: 'Nanum Pen Script', cursive;\n    font-style: normal;\n    font-weight: 400;\n    font-size: 22px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n}\n.organisation-cta-btn{\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n    padding: 12px 16px;\n    gap: 10px;\n    background: #000000;\n    border-radius: 8px;\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 700;\n    font-size: 14px;\n    line-height: 158%;\n    letter-spacing: -0.01em;\n    color: #FFFFFF;\n    transition: background-color 0.3s ease, transform 0.3s ease;\n}\n.organisation-cta-btn:hover{\n    transform: scale(1.05);\n    transition: background-color 0.3s ease, transform 0.3s ease;\n}\n@media screen and (max-width: 768px) {\n.organisation-cta{\n        padding: 64px 16px;\n    }\n    .organisation-cta-description{\n        font-size: 16px;\n        line-height: 21px;\n    }\n}\n</style>\n\n<div class=\"organisation-cta fade-in\">\n            <p class=\"organisation-cta-header\">Join Our Movement</p>\n            <p class=\"organisation-cta-description\">Are you passionate about Free and Open Source Software (FOSS) or social innovation? Become a part of OASIS, where individuals and organizations collaborate to drive tech for good. Whether you're a technologist, a FOSS provider working in the social sector, or a philanthropic institution building tech capacity, there's a place for you in our alliance. Together, we can create meaningful change by leveraging technology for social impact.</p>\n            <p class=\"organisation-cta-subtext\">Ready to make a difference? Join us today!</p>\n            <a href=\"/membership\" style=\"text-decoration: none;\"><button class=\"organisation-cta-btn\">Learn about membership <img style=\"width: 12px;\" src=\"/assets/oasis/images/arrow_right_white.svg\" alt=\"\"></button></a> \n</div>",
+  "type": "Section"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Web Template",
+  "fields": [
+   {
+    "default": null,
+    "fieldname": "title",
+    "fieldtype": "Data",
+    "label": "title",
+    "options": null,
+    "reqd": 0
+   },
+   {
+    "default": null,
+    "fieldname": "content",
+    "fieldtype": "Small Text",
+    "label": "content",
+    "options": null,
+    "reqd": 0
+   }
+  ],
+  "modified": "2025-02-23 09:47:09.891140",
+  "module": "Oasis",
+  "name": "Heading",
+  "standard": 0,
+  "template": "<div class=\"heading\">\n    <h1 class=\"heading-title\">{{ _(title) }}</h1>\n    <p class=\"heading-content\">\n        {{ _(content) }}\n    </p>\n   \n</div>\n\n<style>\n\n.heading-title {\n    font-family: 'Bricolage Grotesque';\n    font-style: normal;\n    font-weight: 600;\n    font-size: 64px;\n    line-height: 124%;\n    letter-spacing: -0.04em;\n    color: #000000;\n}\n.heading-content {\n    font-family: 'Inter';\n    font-style: normal;\n    font-weight: 400;\n    font-size: 20px;\n    line-height: 136%;\n    letter-spacing: -0.01em;\n    color: #000000;\n}\n@media screen and (max-width: 768px) {\n\n    .heading-title{\n        font-size: 36px;\n    }\n    .heading-content{\n        max-width: 100%;\n    }\n}\n</style>\n",
+  "type": "Section"
+ }
+]
